@@ -84,9 +84,17 @@ echo "${COLOR_RESET}"
 # wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
 
 
+# -+-+-+-+-+- Postbird -+-+-+-+-+-
 
-# -+-+-+-+-+- Postgres -+-+-+-+-+-
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Instalando Postbird -+-+-+-+-+-"
+echo "${COLOR_RESET}"
 
+# url=$(curl -s https://www.electronjs.org/apps/postbird | grep -E ".*postbird.*amd64.*deb" | sed "s/.*href=\"//g;s/\".*//g" | head -n 1)
+# wget -O postbird.deb $url
+# sudo dpkg -i ./postbird.deb
+# sudo apt --fix-broken install -y
+# rm -rf ./postbird.deb
 
 # -+-+-+-+-+- Hyper -+-+-+-+-+-
 
