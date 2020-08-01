@@ -242,6 +242,15 @@ echo "${COLOR_RESET}"
 # sudo apt update && sudo apt install vivaldi-stable -y
 
 
+# -+-+-+-+-+- ZSH -+-+-+-+-+-
+
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Instalando ZSH -+-+-+-+-+-"
+echo "${COLOR_RESET}"
+
+# sudo apt install zsh -y
+
+
 # -+-+-+-+-+- Suporte a Flatpak -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"
