@@ -29,6 +29,15 @@ echo "${COLOR_RESET}"
 # sudo apt install curl
 
 
+# -+-+-+-+-+- dconf -+-+-+-+-+-
+
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Instalando dconf -+-+-+-+-+-"
+echo "${COLOR_RESET}"
+
+# sudo apt-get install dconf-cli
+
+
 # -+-+-+-+-+- Firefox -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"
