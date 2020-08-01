@@ -24,11 +24,11 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Free Download Manager -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt install ffmpeg
+# sudo apt install ffmpeg -y
 # wget -O freedownloadmanager.deb https://dn3.freedownloadmanager.org/6/latest/freedownloadmanager.deb
 # sudo dpkg -i ./freedownloadmanager.deb
 # rm -rf ./freedownloadmanager.deb
-# sudo apt --fix-broken install
+# sudo apt --fix-broken install -y
 
 
 # -+-+-+-+-+- JDK 8 -+-+-+-+-+-
@@ -60,7 +60,7 @@ echo "${COLOR_RESET}"
 # java -version
 
 echo "${COLOR_RED}"
-echo "Caso haja erro nas variáveis de ambiente: delete o arquivo /etc/environment e tire o .bkp do arquivo /etc/environment.bkp"
+echo "Caso haja erro nas variáveis de ambiente delete o arquivo /etc/environment e tire o .bkp do arquivo /etc/environment.bkp"
 echo "${COLOR_RESET}"
 
 
@@ -73,6 +73,8 @@ echo "${COLOR_RESET}"
 # wget -O jetbrains-toolbox-1.17.7275.tar.gz https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.17.7275.tar.gz
 # tar -xvzf ./jetbrains-toolbox-1.17.7275.tar.gz
 # ./jetbrains-toolbox-1.17.7275/jetbrains-toolbox
+# rm -rf ./jdk-8u241-linux-x64.tar.gz
+# rm -rf ./jdk-8u241-linux-x64
 
 
 # -+-+-+-+-+- Joplin -+-+-+-+-+-
@@ -126,3 +128,4 @@ echo "${COLOR_RESET}"
 
 # sudo npm install -g yarn
 # yarn -v
+# yarn config set -- --emoji true
