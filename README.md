@@ -15,6 +15,7 @@ Esse script foi feito e testado no Pop!_OS 20.04. É provável que funcione em q
 A seguir está a lista de todos os programas que serão instalados em ordem de instalação.
 
 * (APT) cURL
+* (APT) Firefox
 * (APT) Git
 * (APT) Gnome Boxes
 * (APT) Gnome Tweaks
@@ -70,7 +71,7 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 
 ## Minhas configurações manuais
 
-### Downloads
+### Downloads extras
 
 #### Piskel
 
@@ -79,6 +80,20 @@ Por ser hospedado no Google Drive é necessário baixar manualmente. Acesse [Pis
 #### Davinci Resolve
 
 Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
+
+### Terminal
+
+Como isso envolve uma troca de Shells não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal:
+
+> Obs.: O ZSH já foi instalado, agora precisamos trocar o Bash por ele.
+
+1 - Digite no terminal: `chsh -s $(which zsh)`.
+2 - Reinicie o computador.
+
+### Firefox
+
+1 - Abrir o Firefox.
+2 - Logar com a conta pessoal para a sincronização das informações.
 
 ### Configurações do Gnome
 
@@ -162,6 +177,9 @@ Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção
 5 - Selecione o emulador, avance.
 6 - Abra as intruções sobre o KVM, finalize.
 7 - Após finalizarem as instalações baixe o SDK 28 e o que mais for necessário.
+
+
+
 <!--
 
 Ainda instalar:
