@@ -194,6 +194,15 @@ echo "${COLOR_RESET}"
 # python3 --version
 
 
+# -+-+-+-+-+- Ruby -+-+-+-+-+-
+
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Instalando Ruby -+-+-+-+-+-"
+echo "${COLOR_RESET}"
+
+# sudo apt install ruby-full -y
+
+
 # -+-+-+-+-+- Typora -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"
