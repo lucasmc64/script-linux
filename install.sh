@@ -18,16 +18,25 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Iniciando instalações -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# cd ~/Downloads
+
+# -+-+-+-+-+- Configurando o ambiente -+-+-+-+-+-
+
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Configurando o ambiente -+-+-+-+-+-"
+echo "${COLOR_RESET}"
+
+mkdir ~/Android
+mkdir ~/Android/Sdk
+cd ~/Downloads
 
 
 # -+-+-+-+-+- APT -+-+-+-+-+-
 
-./scripts/apps-apt.sh
+sudo ./scripts/apps-apt.sh
 
 # -+-+-+-+-+- SNAP -+-+-+-+-+-
 
-./scripts/apps-snap.sh
+sudo ./scripts/apps-snap.sh
 
 # -+-+-+-+-+- Flatpak -+-+-+-+-+-
 
@@ -35,11 +44,11 @@ echo "${COLOR_RESET}"
 
 # -+-+-+-+-+- Others -+-+-+-+-+-
 
-./scripts/apps-others.sh
+sudo ./scripts/apps-others.sh
 
 # -+-+-+-+-+- Settings -+-+-+-+-+-
 
-./scripts/settings.sh
+sudo ./scripts/settings.sh
 
 # -+-+-+-+-+- Finalizando instalações -+-+-+-+-+-
 
