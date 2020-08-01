@@ -99,6 +99,15 @@ echo "${COLOR_RESET}"
 # flatpak install flathub com.rawtherapee.RawTherapee -y
 
 
+# -+-+-+-+-+- Spotify -+-+-+-+-+-
+
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Instalando Spotify -+-+-+-+-+-"
+echo "${COLOR_RESET}"
+
+flatpak install com.spotify.Client
+
+
 # -+-+-+-+-+- Telegram -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"

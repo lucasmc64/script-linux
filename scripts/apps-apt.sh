@@ -184,17 +184,6 @@ echo "${COLOR_RESET}"
 # sudo apt install python3
 # python3 --version
 
-# -+-+-+-+-+- Spotify -+-+-+-+-+-
-
-echo "${COLOR_BLUE}"
-echo "-+-+-+-+-+- Instalando Spotify -+-+-+-+-+-"
-echo "${COLOR_RESET}"
-
-# curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-# echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-# sudo apt update
-# sudo apt install spotify-client -y
-
 
 # -+-+-+-+-+- Typora -+-+-+-+-+-
 
