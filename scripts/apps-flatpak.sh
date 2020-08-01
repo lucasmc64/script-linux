@@ -42,7 +42,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando DarkTable -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# flatpak install flathub org.darktable.Darktable -y
+# flatpak install org.darktable.Darktable -y
 
 
 # -+-+-+-+-+- Discord -+-+-+-+-+-
@@ -96,7 +96,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando RawTherapee -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# flatpak install flathub com.rawtherapee.RawTherapee -y
+# flatpak install com.rawtherapee.RawTherapee -y
 
 
 # -+-+-+-+-+- Spotify -+-+-+-+-+-
@@ -105,7 +105,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Spotify -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# flatpak install com.spotify.Client
+# flatpak install com.spotify.Client -y
 
 
 # -+-+-+-+-+- Telegram -+-+-+-+-+-
