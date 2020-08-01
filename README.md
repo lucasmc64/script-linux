@@ -1,18 +1,19 @@
-# Script de instalação
+# Script de instalação &#128220;
 
-## Motivação
+## Motivação &#129300;
 
 Minha história com Linux tem sido... complicada e cheia de formatações. Gosto de configurar as coisas do meu jeitinho, mas fazer isso várias vezes em um ano se tornou desgastante demais.
 
-## Considerações iniciais
+## Considerações iniciais &#129488;
 
 Esse script foi feito e testado no Pop!_OS 20.04. É provável que funcione em qualquer outra distro baseada no Ubuntu 20.04 (e ambiente GNOME quanto aos programas Gnome Boxes e Gnome Tweaks).
 
-## Programas
+## Programas &#128187;
 
 A seguir está a lista de todos os programas que serão instalados em ordem de instalação.
 
 * (APT) cURL
+* (APT) dconf
 * (APT) Firefox
 * (APT) Git
 * (APT) Gnome Boxes
@@ -27,6 +28,7 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * (APT) OBS Studio
 * (APT) PostgreSQL
 * (APT) Python 3
+* (APT) Ruby
 * (APT) Typora
 * (APT) Unrar
 * (APT) Vim
@@ -63,13 +65,13 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * (OTHER) React
 * (OTHER) Yarn
 
-### Observações
+### Observações &#128269;
 
 * O que pude adicionar e instalar de repositórios oficiais eu o fiz.
 * Caso queira alterar a ordem de instalação dos programas basta alterar a ordem dos comandos no arquivo do script.
 * Caso não queira que um programa não seja instalado basta comentar a(s) linhas referentes a sua instalação colocando `#` no início da linha ou você pode simplesmente deletar as linhas do arquivo.
 
-## Executando o script
+## Executando o script &#128163;
 
 > Antes de instalar altere no arquivo ./settings.sh suas configurações do Git.
 
@@ -79,9 +81,9 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 4. Execute o comando `sudo chmod -R a+x ./re-instalation/` para dar as permissões para a execução do script;
 5. Entre na pasta *re-instalation* pelo terminal e dê o comando `sudo ./install.sh`.
 
-## Minhas configurações manuais
+## Minhas configurações manuais &#128406;
 
-### Downloads extras
+### Downloads extras &#129513;
 
 #### Piskel
 
@@ -91,7 +93,7 @@ Por ser hospedado no Google Drive é necessário baixar manualmente. Acesse [Pis
 
 Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
 
-### Terminal
+### Terminal &#129499;
 
 Como isso envolve uma troca de Shells não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal:
 
@@ -214,17 +216,10 @@ alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
 ```
 
-### Firefox
+### Firefox, Google Chrome, Vivaldi, Opera, Zenkit, Zenkit To-Do, Discord, Ferdi, Telegram
 
 1. Abrir o Firefox.
 2. Logar com a conta pessoal para a sincronização das informações.
-
-### Google Chrome
-
-1. Abrir o Google Chrome.
-2. Logar com a conta pessoal para a sincronização das informações.
-
-Obs.: Há o tema *Dracula* para o Google Chrome, mas prefiro o tema escuro do SO ou o *Just Black*.
 
 ### Insomnia Core
 
@@ -251,50 +246,15 @@ Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção
 1. Abrir o Typora.
 2. Clicar no menu *Temas* e escolher *Dracula*.
 
-### Vivaldi
-
-1. Abrir o Vivaldi.
-2. Logar com a conta pessoal para a sincronização das informações.
-
-### Opera
-
-1. Abrir o Opera.
-2. Logar com a conta pessoal para a sincronização das informações.
-
 ### Sosumi
 
 1. Abrir o terminal.
 2. Digitar `sosumi` e esperar que o download se conclua.
 
-### Zenkit
-
-1. Abrir o Zenkit.
-2. Logar com a conta pessoal para a sincronização das informações.
-
-### Zenkit To-Do
-
-1. Abrir o Zenkit To-Do.
-2. Logar com a conta pessoal para a sincronização das informações.
-
-### Discord
-
-1. Abrir o Discord.
-2. Logar com a conta pessoal para a sincronização das informações.
-
-### Ferdi
-
-1. Abrir o Ferdi.
-2. Logar com a conta pessoal para a sincronização das informações.
-
 ### Spotify
 
 1. Abrir o Spotify.
-2. Logar com a conta pessoal para a sincronização das informações.
-
-### Telegram
-
-1. Abrir o Telegram.
-2. Logar com a conta pessoal para a sincronização das informações.
+2. Colocar as playlists para baixar.
 
 ### Configurações do Gnome
 
