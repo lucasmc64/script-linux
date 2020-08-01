@@ -17,7 +17,7 @@ echo "-+-+-+-+-+-+- Atualizando repositórios e pragramas instalados -+-+-+-+-+-
 echo "${COLOR_RESET}"
 
 # sudo apt update
-# sudo apt upgrade
+# sudo apt upgrade -y
 
 
 # -+-+-+-+-+- cURL -+-+-+-+-+-
@@ -26,7 +26,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando cURL -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt install curl
+# sudo apt install curl -y
 
 
 # -+-+-+-+-+- dconf -+-+-+-+-+-
@@ -35,7 +35,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando dconf -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt-get install dconf-cli
+# sudo apt install dconf-cli -y
 
 
 # -+-+-+-+-+- Firefox -+-+-+-+-+-
@@ -44,7 +44,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Firefox -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt install firefox
+# sudo apt install firefox -y
 
 
 # -+-+-+-+-+- Git -+-+-+-+-+-
@@ -55,7 +55,7 @@ echo "${COLOR_RESET}"
 
 # add-apt-repository ppa:git-core/ppa -y
 # apt update
-# apt install git
+# sudo apt install git -y
 
 
 # -+-+-+-+-+- Gnome Boxes -+-+-+-+-+-
@@ -119,7 +119,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Krita -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo add-apt-repository ppa:kritalime/ppa
+# sudo add-apt-repository ppa:kritalime/ppa -y
 # sudo apt update
 # sudo apt install krita -y
 # sudo apt install krita-l10n -y
@@ -135,10 +135,10 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando KVM -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt-get install cpu-checker
+# sudo apt install cpu-checker -y
 # egrep -c '(vmx|svm)' /proc/cpuinfo
 # kvm-ok
-# sudo apt install qemu-kvm
+# sudo apt install qemu-kvm -y
 # sudo adduser $USER kvm
 
 
@@ -157,9 +157,10 @@ echo "-+-+-+-+-+- Instalando Node -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
 # curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-# sudo apt install -y nodejs
+# sudo apt install nodejs -y
 # node -v
 # npm -v
+
 
 # -+-+-+-+-+- OBS Studio -+-+-+-+-+-
 
@@ -168,8 +169,9 @@ echo "-+-+-+-+-+- Instalando OBS Studio -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
 # sudo apt install ffmpeg -y
-# sudo add-apt-repository ppa:obsproject/obs-studio
-# sudo apt update && sudo apt install obs-studio -y
+# sudo add-apt-repository ppa:obsproject/obs-studio -y
+# sudo apt update
+# sudo apt install obs-studio -y
 
 
 # -+-+-+-+-+- PostgreSQL -+-+-+-+-+-
@@ -190,7 +192,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Python 3 -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt install python3
+# sudo apt install python3 -y
 # python3 --version
 
 
@@ -210,7 +212,7 @@ echo "-+-+-+-+-+- Instalando Typora -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
 # wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-# sudo add-apt-repository 'deb https://typora.io/linux ./'
+# sudo add-apt-repository 'deb https://typora.io/linux ./' -y
 # sudo apt update
 # sudo apt install typora -y
 
@@ -254,8 +256,9 @@ echo "-+-+-+-+-+- Instalando Vivaldi -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
 # wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
-# sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
-# sudo apt update && sudo apt install vivaldi-stable -y
+# sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main' -y
+# sudo apt update
+# sudo apt install vivaldi-stable -y
 
 
 # -+-+-+-+-+- ZSH -+-+-+-+-+-
@@ -273,7 +276,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Suporte à Flatpaks -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt install flatpak
+# sudo apt install flatpak -y
 
 
 # -+-+-+-+-+- Suporte a Snaps -+-+-+-+-+-
@@ -282,7 +285,6 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Suporte à Snaps (snapd) -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-# sudo apt update
 # sudo apt install snapd -y
 
 
