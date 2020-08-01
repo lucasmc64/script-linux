@@ -105,7 +105,7 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Spotify -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-flatpak install com.spotify.Client
+# flatpak install com.spotify.Client
 
 
 # -+-+-+-+-+- Telegram -+-+-+-+-+-
