@@ -1,7 +1,5 @@
 # Script de instalação
 
-sudo chmod -R a+x ./re-instalation/
-
 ## Motivação
 
 Minha história com Linux tem sido... complicada e cheia de formatações. Gosto de configurar as coisas do meu jeitinho, mas fazer isso várias vezes em um ano se tornou desgastante demais.
@@ -23,16 +21,18 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * (APT) InkScape
 * (APT) Insomnia Core
 * (APT) Krita
+* (APT) KVM
 * (APT) Libs Gráficas
 * (APT) Node.JS
 * (APT) OBS Studio
+* (APT) PostgreSQL
 * (APT) Python 3
-* (APT) Spotify
 * (APT) Typora
 * (APT) Unrar
 * (APT) Vim
 * (APT) Visual Studio Code
 * (APT) Vivaldi
+* (APT) ZSH
 * (APT) Suporte a Flatpak (caso a distro não tenha)
 * (APT) Suporte a Snaps (caso a distro não tenha)
 * (SNAP) Blender
@@ -51,9 +51,17 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * (FLATPAK) LibreOffice
 * (FLATPAK) NetBeans
 * (FLATPAK) RawTherapee
+* (FLATPAK) Spotify
 * (FLATPAK) Telegram
-* (Script oficial) Joplin
-* (WGET) Free Download Manager
+* (OTHER) Expo
+* (OTHER) Free Download Manager
+* (OTHER) JDK 8
+* (OTHER) JetBrains ToolBox
+* (OTHER) Joplin
+* (OTHER) Postbird
+* (OTHER) Hyper
+* (OTHER) React
+* (OTHER) Yarn
 
 ### Observações
 
@@ -62,6 +70,8 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * Caso não queira que um programa não seja instalado basta comentar a(s) linhas referentes a sua instalação colocando `#` no início da linha ou você pode simplesmente deletar as linhas do arquivo.
 
 ## Executando o script
+
+> Antes de instalar altere no arquivo ./settings.sh suas configurações do Git.
 
 1 - Baixe o arquivo *.zip*;
 2 - Extraia-o em uma pasta de sua preferência;
@@ -95,6 +105,83 @@ Como isso envolve uma troca de Shells não há como fazer via script, mas segue 
 1 - Abrir o Firefox.
 2 - Logar com a conta pessoal para a sincronização das informações.
 
+### Google Chrome
+
+1 - Abrir o Google Chrome.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+Obs.: Há o tema *Dracula* para o Google Chrome, mas prefiro o tema escuro do SO ou o *Just Black*.
+
+### Insomnia Core
+
+1 - Abra o Insomnia Core.
+2 - Clique no menu *Aplication* e escolha *Preferences*.
+3 - Na janela que se abre, na aba *General*, mude o *Editor Indent Size* para 4.
+4 - Clique na aba *Plugins*.
+5 - Digite `insomnia-plugin-dracula-theme` no campo e clique em *Install plugin*.
+6 - Agora, na aba *Themes*, clique em *Dracula*.
+
+### Visual Studio Code
+
+Recomendo a extensão Settings Sync para salvar as configurações.
+
+1 - Abrir o Visual Studio Code.
+2 - Instalar a extensão *Settings Sync*.
+3 - Autorizar ela a usar o GitHub.
+3 - Baixar as configurações (SHIFT + ALT + D).
+
+Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção de Plugins... Mas prefiro o tema *Horizon*.
+
+### Typora
+
+1 - Abrir o Typora.
+2 - Clicar no menu *Temas* e escolher *Dracula*.
+
+### Vivaldi
+
+1 - Abrir o Vivaldi.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Opera
+
+1 - Abrir o Opera.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Sosumi
+
+1 - Abrir o terminal.
+2 - Digitar `sosumi` e esperar que o download se conclua.
+
+### Zenkit
+
+1 - Abrir o Zenkit.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Zenkit To-Do
+
+1 - Abrir o Zenkit To-Do.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Discord
+
+1 - Abrir o Discord.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Ferdi
+
+1 - Abrir o Ferdi.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Spotify
+
+1 - Abrir o Spotify.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
+### Telegram
+
+1 - Abrir o Telegram.
+2 - Logar com a conta pessoal para a sincronização das informações.
+
 ### Configurações do Gnome
 
 1 - Abrir as configurações do Gnome.
@@ -113,12 +200,16 @@ Como isso envolve uma troca de Shells não há como fazer via script, mas segue 
 4 - Na aba *Janelas* habilite **Centralizar novas janelas**.
 5 - Na aba *Teclado e mouse* defina o *Perfil de aceleração* do mouse como **Flat**.
 
-### Google Chrome
+### Free Download Manager
 
-1 - Abrir o Google Chrome.
-2 - Logar com a conta pessoal para a sincronização das informações.
+1 - Abrir o Free Download Manager.
+2 - Clicar no menu hamburguer e escolher *Preferências*.
+3 - Mude então para o tema escuro.
 
-Obs.: Há o tema *Dracula* para o Google Chrome, mas prefiro o tema escuro do SO ou o *Just Black*.
+### JetBrains Toolbox
+
+1 - Abra o JetBrains Toolbox.
+2 - Instale: Android Studio, PHPStorm, WebSorm, IntelliJ Professional, PyCharm Professional.
 
 ### Joplin
 
@@ -126,42 +217,6 @@ Obs.: Há o tema *Dracula* para o Google Chrome, mas prefiro o tema escuro do SO
 2 - Clicar no menu *Ferramentas* e escolher *Opções*.
 3 - Na janela que se abre, na aba *Sincronização* defnina qual nuvem o programa usará e o autorize.
 4 - Agora, na aba Aparência coloque o tema *Escuro* ou *Dracula*.
-
-### Typora
-
-1 - Abrir o Typora.
-2 - Clicar no menu *Temas* e escolher *Dracula*.
-
-### Visual Studio Code
-
-Recomendo a extensão Settings Sync para salvar as configurações.
-
-1 - Abrir o Visual Studio Code.
-2 - Instalar a extensão *Settings Sync*.
-3 - Autorizar ela a usar o GitHub.
-3 - Baixar as configurações (SHIFT + ALT + D).
-
-Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção de Plugins... Mas prefiro o tema *Horizon*.
-
-### Free Download Manager
-
-1 - Abrir o Free Download Manager.
-2 - Clicar no menu hamburguer e escolher *Preferências*.
-3 - Mude então para o tema escuro.
-
-### Insomnia Core
-
-1 - Abra o Insomnia Core.
-2 - Clique no menu *Aplication* e escolha *Preferences*.
-3 - Na janela que se abre, na aba *General*, mude o *Editor Indent Size* para 4.
-4 - Clique na aba *Plugins*.
-5 - Digite `insomnia-plugin-dracula-theme` no campo e clique em *Install plugin*.
-6 - Agora, na aba *Themes*, clique em *Dracula*.
-
-### JetBrains Toolbox
-
-1 - Abra o JetBrains Toolbox.
-2 - Instale: Android Studio, PHPStorm, WebSorm, IntelliJ Professional, PyCharm Professional.
 
 #### Android Studio
 
@@ -177,8 +232,6 @@ Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção
 5 - Selecione o emulador, avance.
 6 - Abra as intruções sobre o KVM, finalize.
 7 - Após finalizarem as instalações baixe o SDK 28 e o que mais for necessário.
-
-
 
 <!--
 
