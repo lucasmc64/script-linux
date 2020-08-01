@@ -29,6 +29,15 @@ echo "${COLOR_RESET}"
 # sudo apt install curl
 
 
+# -+-+-+-+-+- Firefox -+-+-+-+-+-
+
+echo "${COLOR_BLUE}"
+echo "-+-+-+-+-+- Instalando Firefox -+-+-+-+-+-"
+echo "${COLOR_RESET}"
+
+# sudo apt install firefox
+
+
 # -+-+-+-+-+- Git -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"
