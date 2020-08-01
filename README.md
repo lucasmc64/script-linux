@@ -119,7 +119,7 @@ Como isso envolve uma troca de Shells não há como fazer via script, mas segue 
 9. Extraia o .zip.
 10. Recorte a pasta.
 11. Cole a pasta no diretório `/usr/share/fonts/truetype`
-12. Acesse as configurações do terminal e defina `Fira Code Retina` como sua fonte.
+12. Acesse as configurações do terminal e defina `FiraCode Nerd Font Retina` como sua fonte.
 
 #### Tema Spaceship
 
@@ -172,8 +172,47 @@ zplugin light buonomo/yarn-completion
 24. Clique no *Menu*, selecione *Plugins* e clique em **Install Hyper CLI command in PATH**
 25. Digite no Hyper `hyper i hyper-dracula`.
 26. Clique no *Menu*, selecione *Edit* e clique em **IPreferences**
-27. Em `fontFamily` adicione `Fira Code` antes das outras fontes.
-28. Digite no Hyper `hyper i hyper-font-ligatures`
+27. Em `fontFamily` adicione `"FiraCode Nerd Font"` antes das outras fontes.
+28. Digite no Hyper `hyper i hyper-font-ligatures`, `hyper i hyper-search`
+29. Caso o Hyper apresente uma `%` aleatória no terminal, abra o arquivo *.zshrc* e adicione a linha `unsetopt PROMPT_SP` no final do arquivo.
+
+#### Comando `ls` colorido
+
+30. Execute `sudo gem install colorls`.
+31. Abra o arquivo *.zshrc* e adicione a linha `source $(dirname $(gem which colorls))/tab_complete.sh` no final do arquivo.
+32. Abra o gerenciador de arquivos entre no diretório *~/.config* e crie uma pasta chamada **colorls**.
+33. Execute `cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml`
+34. Abra o arquivo *~/.config/colorls/dark_colors.yaml* e adicione/substitua as seguintes linhas:
+
+```
+# Main Colors
+unrecognized_file: palegreen
+recognized_file:   turquoise
+dir:               dodgerblue
+
+# Link
+dead_link: red
+link:      cyan
+
+# Access Modes
+write:     darkkhaki
+read:      limegreen
+exec:      red
+no_access: indianred
+
+# Age
+day_old:     mediumspringgreen
+hour_old:    lime
+no_modifier: seagreen
+```
+
+35. Agora abra o arquivo *~/zshrc* e adicione as seguintes linhas no final do arquivo:
+
+```
+alias ls='colorls -h --group-directories-first -1'
+alias l='colorls --group-directories-first --almost-all'
+alias ll='colorls --group-directories-first --almost-all --long'
+```
 
 ### Firefox
 
