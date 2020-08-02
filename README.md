@@ -8,9 +8,9 @@ Minha história com Linux tem sido... complicada e cheia de formatações. Gosto
 
 Esse script foi feito e testado no Pop!_OS 20.04. É provável que funcione em qualquer outra distro baseada no Ubuntu 20.04 (e ambiente GNOME quanto aos programas Gnome Boxes e Gnome Tweaks).
 
-## O que o script faz exatamente?
+## O que o script faz exatamente? &#129323;
 
-## Programas &#128187;
+### Programas &#128187;
 
 A seguir está a lista de tudo que será instalado em ordem alfabética de acordo com o "tipo" de instalação.
 
@@ -67,7 +67,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) React
 * (OTHER) Yarn
 
-## Configurações
+### Configurações &#9881;
 
 Além de adicionar todos os repositórios oficiais necessários, o script também configura as variáveis de ambiente do JDK 8 e do Android Studio.
 
