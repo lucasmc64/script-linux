@@ -8,9 +8,11 @@ Minha história com Linux tem sido... complicada e cheia de formatações. Gosto
 
 Esse script foi feito e testado no Pop!_OS 20.04. É provável que funcione em qualquer outra distro baseada no Ubuntu 20.04 (e ambiente GNOME quanto aos programas Gnome Boxes e Gnome Tweaks).
 
+## O que o script faz exatamente?
+
 ## Programas &#128187;
 
-A seguir está a lista de todos os programas que serão instalados em ordem de instalação.
+A seguir está a lista de tudo que será instalado em ordem alfabética de acordo com o "tipo" de instalação.
 
 * (APT) cURL
 * (APT) dconf
@@ -35,8 +37,8 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * (APT) Visual Studio Code
 * (APT) Vivaldi
 * (APT) ZSH
-* (APT) Suporte a Flatpak (caso a distro não tenha)
-* (APT) Suporte a Snaps (caso a distro não tenha)
+* (APT) Suporte a Flatpak (EXTRA: caso a distro não tenha)
+* (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
 * (SNAP) Blender
 * (SNAP) Opera Developer
 * (SNAP) Sosumi
@@ -65,6 +67,16 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 * (OTHER) React
 * (OTHER) Yarn
 
+## Configurações
+
+Além de adicionar todos os repositórios oficiais necessários, o script também configura as variáveis de ambiente do JDK 8 e do Android Studio.
+
+> É de vital impotâncias que os SDKs sejam baixados no diretório `~/Android/Sdk` já criando durante a instalação.
+
+Além disso ele habilita os emojis do Yarn, faz as principais configurações do Git e instala o tema Dracula no Typora.
+
+> Ainda é necessário abrir o Typora e habilitar o tema.
+
 ### Observações &#128269;
 
 * O que pude adicionar e instalar de repositórios oficiais eu o fiz.
@@ -73,13 +85,12 @@ A seguir está a lista de todos os programas que serão instalados em ordem de i
 
 ## Executando o script &#128163;
 
-> Antes de instalar altere no arquivo ./settings.sh suas configurações do Git.
+> Antes de instalar altere no arquivo ./scripts/settings.sh suas configurações do Git.
 
-1. Baixe o arquivo *.zip*;
-2. Extraia-o em uma pasta de sua preferência;
-3. Abra o termina na pasta em que você extraiu o *.zip*, não dentro da pasta resultante (*re-instalation*);
-4. Execute o comando `sudo chmod -R a+x ./re-instalation/` para dar as permissões para a execução do script;
-5. Entre na pasta *re-instalation* pelo terminal e dê o comando `sudo ./install.sh`.
+1. Baixe o arquivo *.zip* ou clone esse repositório.
+2. Abra o termina na pasta em que você extraiu ou clonou, não dentro da pasta resultante (*script-linux*).
+3. Execute o comando `sudo chmod -R a+x ./script-linux/` para dar as permissões para a execução do script.
+4. Entre na pasta *script-linux* pelo terminal e dê o comando `sudo ./install.sh` para instalar tudo.
 
 ## Minhas configurações manuais &#128406;
 
@@ -95,7 +106,7 @@ Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Res
 
 ### Terminal &#129499;
 
-Como isso envolve uma troca de Shells não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal:
+Como isso envolve uma troca de Shells não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal.
 
 > Obs.: O ZSH já foi instalado, agora precisamos trocar o Bash por ele.
 
@@ -107,32 +118,32 @@ Como isso envolve uma troca de Shells não há como fazer via script, mas segue 
 
 #### Oh My ZSH
 
-4. Execute `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+4. Execute `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`.
 
 #### Tema Dracula no Gnome Terminal
 
-5. Execute `git clone https://github.com/dracula/gnome-terminal`
-6. Execute `cd gnome-terminal`
-7. Execute `./install.sh`
+5. Execute `git clone https://github.com/dracula/gnome-terminal`.
+6. Execute `cd gnome-terminal`.
+7. Execute `./install.sh`.
 
 #### Fira Code
 
-8. Acesse e baixe a versão mais recente do **Fira Code**: `https://github.com/ryanoasis/nerd-fonts/releases/`
+8. Acesse e baixe a versão mais recente do **Fira Code**: `https://github.com/ryanoasis/nerd-fonts/releases/`.
 9. Extraia o .zip.
 10. Recorte a pasta.
-11. Cole a pasta no diretório `/usr/share/fonts/truetype`
+11. Cole a pasta no diretório `/usr/share/fonts/truetype`.
 12. Acesse as configurações do terminal e defina `FiraCode Nerd Font Retina` como sua fonte.
 
 #### Tema Spaceship
 
-13. Execute: `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
-14. Execute `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
-15. Execute `gedit ~/.zshrc`
+13. Execute: `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`.
+14. Execute `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`.
+15. Execute `gedit ~/.zshrc`.
 16. Mude o conteúdo do ZSH_THEME para `spaceship`.
 17. Feche o terminal e abra-o novamente.
 18. No fim do arquivo adicione:
 
-```
+```bash
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -156,11 +167,11 @@ SPACESHIP_CHAR_SUFFIX=" "
 
 #### Plugins
 
-20. Execute `sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"`
+20. Execute `sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"`.
 21. Execute `gedit ~/.zshrc`.
 22. No fim do arquivo adicione:
 
-```
+```bash
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
@@ -171,11 +182,11 @@ zplugin light buonomo/yarn-completion
 #### Hyper Terminal
 
 23. Abra o Hyper.
-24. Clique no *Menu*, selecione *Plugins* e clique em **Install Hyper CLI command in PATH**
+24. Clique no *Menu*, selecione *Plugins* e clique em **Install Hyper CLI command in PATH**.
 25. Digite no Hyper `hyper i hyper-dracula`.
-26. Clique no *Menu*, selecione *Edit* e clique em **IPreferences**
+26. Clique no *Menu*, selecione *Edit* e clique em **Preferences**.
 27. Em `fontFamily` adicione `"FiraCode Nerd Font"` antes das outras fontes.
-28. Digite no Hyper `hyper i hyper-font-ligatures`, `hyper i hyper-search`
+28. Digite no Hyper `hyper i hyper-font-ligatures`, `hyper i hyper-search`.
 29. Caso o Hyper apresente uma `%` aleatória no terminal, abra o arquivo *.zshrc* e adicione a linha `unsetopt PROMPT_SP` no final do arquivo.
 
 #### Comando `ls` colorido
@@ -183,10 +194,10 @@ zplugin light buonomo/yarn-completion
 30. Execute `sudo gem install colorls`.
 31. Abra o arquivo *.zshrc* e adicione a linha `source $(dirname $(gem which colorls))/tab_complete.sh` no final do arquivo.
 32. Abra o gerenciador de arquivos entre no diretório *~/.config* e crie uma pasta chamada **colorls**.
-33. Execute `cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml`
+33. Execute `cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml`.
 34. Abra o arquivo *~/.config/colorls/dark_colors.yaml* e adicione/substitua as seguintes linhas:
 
-```
+```shell
 # Main Colors
 unrecognized_file: palegreen
 recognized_file:   turquoise
@@ -210,7 +221,7 @@ no_modifier: seagreen
 
 35. Agora abra o arquivo *~/zshrc* e adicione as seguintes linhas no final do arquivo:
 
-```
+```shell
 alias ls='colorls -h --group-directories-first -1'
 alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
@@ -218,7 +229,7 @@ alias ll='colorls --group-directories-first --almost-all --long'
 
 ### Firefox, Google Chrome, Vivaldi, Opera, Zenkit, Zenkit To-Do, Discord, Ferdi, Telegram
 
-1. Abrir o Firefox.
+1. Abrir os respectivos programas..
 2. Logar com a conta pessoal para a sincronização das informações.
 
 ### Insomnia Core
@@ -239,7 +250,7 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 3. Autorizar ela a usar o GitHub.
 3. Baixar as configurações (SHIFT + ALT + D).
 
-Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção de Plugins... Mas prefiro o tema *Horizon*.
+> Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção de Plugins... Mas prefiro o tema *Horizon*.
 
 ### Typora
 
@@ -305,7 +316,7 @@ Obs.: Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção
 4. Coloque a pasta correta do JDK, avance.
 5. Selecione o emulador, avance.
 6. Abra as intruções sobre o KVM, finalize.
-7. Após finalizarem as instalações baixe o SDK 28 e o que mais for necessário.
+7. Após finalizarem as instalações baixe o SDK 28 (usado no Ract atualmente) e o que mais for necessário.
 
 <!--
 
