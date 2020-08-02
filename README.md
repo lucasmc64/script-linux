@@ -92,15 +92,13 @@ Além disso ele habilita os emojis do Yarn, faz as principais configurações do
 3. Execute o comando `sudo chmod -R a+x ./script-linux/` para dar as permissões para a execução do script.
 4. Entre na pasta *script-linux* pelo terminal e dê o comando `sudo ./install.sh` para instalar tudo.
 
-## Minhas configurações manuais &#128406;
+## Minhas configurações manuais e downloads extras &#128406;
 
-### Downloads extras &#129513;
-
-#### Piskel
+### Piskel &#127912;
 
 Por ser hospedado no Google Drive é necessário baixar manualmente. Acesse [Piskel](https://www.piskelapp.com/).
 
-#### Davinci Resolve
+### Davinci Resolve &#127916;
 
 Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
 
@@ -227,12 +225,12 @@ alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
 ```
 
-### Firefox, Google Chrome, Vivaldi, Opera, Zenkit, Zenkit To-Do, Discord, Ferdi, Telegram
+### Firefox, Google Chrome, Vivaldi, Opera, Zenkit, Zenkit To-Do, Discord, Ferdi, Telegram &#129680;
 
 1. Abrir os respectivos programas..
 2. Logar com a conta pessoal para a sincronização das informações.
 
-### Insomnia Core
+### Insomnia Core &#128299;
 
 1. Abra o Insomnia Core.
 2. Clique no menu *Aplication* e escolha *Preferences*.
@@ -241,7 +239,7 @@ alias ll='colorls --group-directories-first --almost-all --long'
 5. Digite `insomnia-plugin-dracula-theme` no campo e clique em *Install plugin*.
 6. Agora, na aba *Themes*, clique em *Dracula*.
 
-### Visual Studio Code
+### Visual Studio Code &#127913;
 
 Recomendo a extensão Settings Sync para salvar as configurações.
 
@@ -252,22 +250,22 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 
 > Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção de Plugins... Mas prefiro o tema *Horizon*.
 
-### Typora
+### Typora &#128196;
 
 1. Abrir o Typora.
 2. Clicar no menu *Temas* e escolher *Dracula*.
 
-### Sosumi
+### Sosumi &#129405;
 
 1. Abrir o terminal.
 2. Digitar `sosumi` e esperar que o download se conclua.
 
-### Spotify
+### Spotify &#127911;
 
 1. Abrir o Spotify.
 2. Colocar as playlists para baixar.
 
-### Configurações do Gnome
+### Configurações do Gnome &#128736;
 
 1. Abrir as configurações do Gnome.
 2. Na aba *Aparência* importe e defina o papel de parede.
@@ -277,7 +275,7 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 6. Na aba *Mouse e Touchpad* desligue a **Rolagem Natural**.
 7. Na aba *Usuários* altere a **foto de perfil**.
 
-### Gnome Tweaks
+### Gnome Tweaks &#128295;
 
 1. Abrir Gnome Tweaks.
 2. Na aba *Aparência* altere e instale temas como quiser.
@@ -285,25 +283,25 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 4. Na aba *Janelas* habilite **Centralizar novas janelas**.
 5. Na aba *Teclado e mouse* defina o *Perfil de aceleração* do mouse como **Flat**.
 
-### Free Download Manager
+### Free Download Manager &#128722;
 
 1. Abrir o Free Download Manager.
 2. Clicar no menu hamburguer e escolher *Preferências*.
 3. Mude então para o tema escuro.
 
-### JetBrains Toolbox
+### JetBrains Toolbox &#129520;
 
 1. Abra o JetBrains Toolbox.
 2. Instale: Android Studio, PHPStorm, WebSorm, IntelliJ Professional, PyCharm Professional.
 
-### Joplin
+### Joplin &#9997;
 
 1. Abrir o Joplin.
 2. Clicar no menu *Ferramentas* e escolher *Opções*.
 3. Na janela que se abre, na aba *Sincronização* defnina qual nuvem o programa usará e o autorize.
 4. Agora, na aba Aparência coloque o tema *Escuro* ou *Dracula*.
 
-#### Android Studio
+### Android Studio &#9879;
 
 1. Adicione nas variáveis de ambiente o seguinte caminho (alterando o número da versão do Android Studio):
 
