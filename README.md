@@ -94,10 +94,6 @@ Além disso ele habilita os emojis do Yarn, faz as principais configurações do
 
 ## Minhas configurações manuais e downloads extras &#128406;
 
-### Piskel &#127912;
-
-Por ser hospedado no Google Drive é necessário baixar manualmente. Acesse [Piskel](https://www.piskelapp.com/).
-
 ### Davinci Resolve &#127916;
 
 Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
@@ -129,7 +125,7 @@ Como isso envolve uma troca de Shells não há como fazer via script, mas segue 
 8. Acesse e baixe a versão mais recente do **Fira Code**: `https://github.com/ryanoasis/nerd-fonts/releases/`.
 9. Extraia o .zip.
 10. Recorte a pasta.
-11. Cole a pasta no diretório `/usr/share/fonts/truetype`.
+11. Cole a pasta no diretório `**/usr/share/fonts/truetype**`.
 12. Acesse as configurações do terminal e defina `FiraCode Nerd Font Retina` como sua fonte.
 
 #### Tema Spaceship
