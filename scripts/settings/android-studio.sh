@@ -19,5 +19,5 @@ OLD_PATH_CONTENT=`echo ${PATH_VARIABLE:6:${#PATH_VARIABLE}-7}`
 ADD_TO_PATH=`echo ":/home/lucasmc64/Android/Sdk/emulator:/home/lucasmc64/Android/Sdk/tools:/home/lucasmc64/Android/Sdk/tools/bin:/home/lucasmc64/Android/Sdk/platform-tools"`
 NEW_PATH_CONTENT=`echo ${OLD_PATH_CONTENT}${ADD_TO_PATH}`
 OTHERS_VARIABLES=`grep -v "PATH=\"*\"" /etc/environment`
-ANDROID_VARIABLES=`printf "ANDROID_HOME=\"~/Android/Sdk\"\n"`
+ANDROID_VARIABLES=`printf "ANDROID_HOME=\"/home/lucasmc64/Android/Sdk\"\n"`
 sudo printf "PATH=\"${NEW_PATH_CONTENT}\"\n\n${OTHERS_VARIABLES}\n\n${ANDROID_VARIABLES}" > /etc/environment

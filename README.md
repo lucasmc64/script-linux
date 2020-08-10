@@ -72,8 +72,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 
 Além de adicionar todos os repositórios oficiais necessários, o script também configura as variáveis de ambiente do JDK 8 e do Android Studio.
 
-> É de vital impotâncias que os SDKs sejam baixados no diretório `~/Android/Sdk` já criando durante a instalação.
-
 Além disso ele habilita os emojis do Yarn, faz as principais configurações do Git e instala o tema Dracula no Typora.
 
 > Ainda é necessário abrir o Typora e habilitar o tema.
@@ -85,6 +83,18 @@ Além disso ele habilita os emojis do Yarn, faz as principais configurações do
 * Caso não queira que um programa não seja instalado basta comentar a(s) linhas referentes a sua instalação colocando `#` no início da linha ou você pode simplesmente deletar as linhas do arquivo.
 
 ## Executando o script &#128163;
+
+### Atenção &#9760;
+
+Esteja ciente de que esse script está com minhas configurações pessoais e que seria interesssante você dar uma olhada nele antes de executá-lo. Há alguns pontos importantes em que você precisa estar somente atento e outros que exigem mudanças no código.
+
+* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório é necessário alterar o caminho dos SDKs.
+* Mesmo que mantenha `~/Android/Sdk` como o diretório dos SDKs você ainda precisa alterar `/home/lucasmc64` para a sua home... Ainda não consegui fazer isso automaticamente.
+* Caso tenha alterado o diretório de SDKs `~/Android/Sdk` atente-se a usá-lo na primeira inicialização do Android Studio.
+* O script não baixa a versão mais recente do JDK8, mais especificamente baixa a versão 1.8.0-241. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
+* Altere as configurações de conta do git para as suas configurações pessoais.
+
+### Mão na massa &#129302;
 
 > Antes de instalar altere no arquivo ./scripts/settings.sh suas configurações do Git.
 
