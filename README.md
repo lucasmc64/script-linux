@@ -31,6 +31,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) PostgreSQL
 * (APT) Python 3
 * (APT) Ruby
+* (APT) Sqlite
 * (APT) Typora
 * (APT) Unrar
 * (APT) Vim
