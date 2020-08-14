@@ -21,6 +21,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Gnome Boxes
 * (APT) Gnome Tweaks
 * (APT) Google Chrome
+* (APT) Haskell
 * (APT) InkScape
 * (APT) Insomnia Core
 * (APT) Krita
@@ -207,21 +208,6 @@ zplugin light buonomo/yarn-completion
 unrecognized_file: palegreen
 recognized_file:   turquoise
 dir:               dodgerblue
-
-# Link
-dead_link: red
-link:      cyan
-
-# Access Modes
-write:     darkkhaki
-read:      limegreen
-exec:      red
-no_access: indianred
-
-# Age
-day_old:     mediumspringgreen
-hour_old:    lime
-no_modifier: seagreen
 ```
 
 35. Agora abra o arquivo *~/zshrc* e adicione as seguintes linhas no final do arquivo:
