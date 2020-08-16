@@ -50,6 +50,7 @@ sudo ./scripts/apt/obs-studio.sh
 sudo ./scripts/apt/postgresql.sh
 sudo ./scripts/apt/python.sh
 sudo ./scripts/apt/ruby.sh
+sudo ./scripts/apt/sqlite.sh
 sudo ./scripts/apt/typora.sh
 sudo ./scripts/apt/unrar.sh
 sudo ./scripts/apt/vim.sh
@@ -106,6 +107,10 @@ sudo ./scripts/settings/android-studio.sh
 # => Git
 
 ./scripts/settings/git.sh
+
+# => KVM
+
+./scripts/settings/kvm.sh
 
 # => Typora
 
