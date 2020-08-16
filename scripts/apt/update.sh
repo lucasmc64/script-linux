@@ -18,4 +18,4 @@ echo "${COLOR_RESET}"
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt autoremove -COLOR_YELLOW
+sudo apt autoremove -y

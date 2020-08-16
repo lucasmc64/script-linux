@@ -15,4 +15,5 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Sqlite -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-sudo apt install sqlite -y
+sudo apt install sqlite sqlite-doc sqlite3-doc -y
+

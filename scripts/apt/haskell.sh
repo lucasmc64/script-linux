@@ -16,4 +16,5 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Haskell -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-sudo apt install haskell-platform
+sudo apt install haskell-platform -y
+
