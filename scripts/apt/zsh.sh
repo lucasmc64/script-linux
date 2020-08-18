@@ -16,4 +16,4 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando ZSH -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-sudo apt install zsh -y
+sudo apt install zsh zsh-doc -y
