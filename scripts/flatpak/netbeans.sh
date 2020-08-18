@@ -10,7 +10,7 @@ COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
 
-# -+-+-+-+-+- Netbeans -+-+-+-+-+-
+# -+-+-+-+-+- Instalando Netbeans -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Netbeans -+-+-+-+-+-"
