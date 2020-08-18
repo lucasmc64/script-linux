@@ -16,5 +16,4 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Configurando KVM -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-adduser $USER kvm
-
+sudo adduser $USER kvm
