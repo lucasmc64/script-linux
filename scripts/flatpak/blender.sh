@@ -16,4 +16,4 @@ echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando Blender -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-sudo snap install blender --classic
+flatpak install org.blender.Blender -y
