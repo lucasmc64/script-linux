@@ -10,12 +10,11 @@ COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
 
-# -+-+-+-+-+- InkScape -+-+-+-+-+-
+# -+-+-+-+-+- Instalando InkScape -+-+-+-+-+-
 
 echo "${COLOR_BLUE}"
 echo "-+-+-+-+-+- Instalando InkScape -+-+-+-+-+-"
 echo "${COLOR_RESET}"
 
-sudo add-apt-repository ppa:inkscape.dev/stable -y
-sudo apt update
-sudo apt install inkscape -y
+flatpak install org.inkscape.Inkscape -y
+
