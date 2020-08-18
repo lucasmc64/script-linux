@@ -22,7 +22,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Gnome Tweaks
 * (APT) Google Chrome
 * (APT) Haskell
-* (APT) InkScape
 * (APT) Insomnia Core
 * (APT) Krita
 * (APT) KVM
@@ -41,19 +40,19 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) ZSH
 * (APT) Suporte a Flatpak (EXTRA: caso a distro não tenha)
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
-* (SNAP) Blender
 * (SNAP) Opera Developer
 * (SNAP) Sosumi
 * (SNAP) VLC
-* (SNAP) Zenkit
-* (SNAP) Zenkit To-Do
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
+* (FLATPAK) Android Studio
 * (FLATPAK) Audacity
+* (FLATPAK) Blender
 * (FLATPAK) Code::Blocks
 * (FLATPAK) DarkTable
 * (FLATPAK) Discord
 * (FLATPAK) Ferdi
 * (FLATPAK) GIMP
+* (FALTPAK) InkScape
 * (FLATPAK) LibreOffice
 * (FLATPAK) NetBeans
 * (FLATPAK) RawTherapee
@@ -61,11 +60,12 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) Telegram
 * (OTHER) Expo
 * (OTHER) Free Download Manager
+* (OTHER) Hyper
 * (OTHER) JDK 8
 * (OTHER) JetBrains ToolBox
 * (OTHER) Joplin
+* (OTHER) Microsoft Teams
 * (OTHER) Postbird
-* (OTHER) Hyper
 * (OTHER) React
 * (OTHER) Yarn
 
