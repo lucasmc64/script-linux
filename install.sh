@@ -40,7 +40,6 @@ sudo ./scripts/apt/gnome-boxes.sh
 sudo ./scripts/apt/gnome-tweaks.sh
 sudo ./scripts/apt/google-chrome.sh
 sudo ./scripts/apt/haskell.sh
-sudo ./scripts/apt/inkscape.sh
 sudo ./scripts/apt/insomnia.sh
 sudo ./scripts/apt/krita.sh
 sudo ./scripts/apt/kvm.sh
@@ -64,7 +63,6 @@ sudo ./scripts/apt/update.sh
 # -+-+-+-+-+- SNAP -+-+-+-+-+-
 
 sudo ./scripts/snap/update.sh
-sudo ./scripts/snap/blender.sh
 sudo ./scripts/snap/opera-developer.sh
 sudo ./scripts/snap/sosumi.sh
 sudo ./scripts/snap/vlc.sh
@@ -74,11 +72,14 @@ sudo ./scripts/snap/update.sh
 
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
+./scripts/flatpak/android-studio.sh
 ./scripts/flatpak/audacity.sh
+./scripts/flatpak/blender.sh
 ./scripts/flatpak/code-blocks.sh
 ./scripts/flatpak/darktable.sh
 ./scripts/flatpak/discord.sh
 ./scripts/flatpak/gimp.sh
+./scripts/flatpak/inkscape.sh
 ./scripts/flatpak/libreoffice.sh
 ./scripts/flatpak/netbeans.sh
 ./scripts/flatpak/rawtherapee.sh
@@ -94,6 +95,7 @@ sudo ./scripts/others/hyper.sh
 sudo ./scripts/others/jdk8.sh
 sudo ./scripts/others/jetbrains-toolbox.sh
 ./scripts/others/joplin.sh
+sudo ./scripts/others/microsoft-teams.sh
 sudo ./scripts/others/postbird.sh
 sudo ./scripts/others/react.sh
 sudo ./scripts/others/yarn.sh
