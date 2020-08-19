@@ -2,7 +2,7 @@
 
 ## Motivação &#129300;
 
-Minha história com Linux tem sido... complicada e cheia de formatações. Gosto de configurar as coisas do meu jeitinho, mas fazer isso várias vezes em um ano se tornou desgastante demais.
+Minha história com Linux tem sido... complicada e cheia de formatações. Gosto de configurar as coisas do meu jeitinho, mas fazer isso várias vezes em um ano se tornou desgastante demais, por isso criei este script e detalhei mais abaixo as configurações que faço (é muita coisa para lembrar).
 
 ## Considerações iniciais &#129488;
 
@@ -44,7 +44,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (SNAP) Sosumi
 * (SNAP) VLC
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
-* (FLATPAK) Android Studio
 * (FLATPAK) Audacity
 * (FLATPAK) Blender
 * (FLATPAK) Code::Blocks
@@ -56,11 +55,9 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) LibreOffice
 * (FLATPAK) NetBeans
 * (FLATPAK) RawTherapee
-* (FLATPAK) Spotify
 * (FLATPAK) Telegram
 * (OTHER) Expo
 * (OTHER) Free Download Manager
-* (OTHER) Hyper
 * (OTHER) JDK 8
 * (OTHER) JetBrains ToolBox
 * (OTHER) Joplin
@@ -79,20 +76,18 @@ Além disso ele habilita os emojis do Yarn, faz as principais configurações do
 
 ### Observações &#128269;
 
-* O que pude adicionar e instalar de repositórios oficiais eu o fiz.
-* Caso queira alterar a ordem de instalação dos programas basta alterar a ordem dos comandos no arquivo do script.
-* Caso não queira que um programa não seja instalado basta comentar a(s) linhas referentes a sua instalação colocando `#` no início da linha ou você pode simplesmente deletar as linhas do arquivo.
+* Caso queira alterar a ordem de instalação dos programas basta alterar a ordem dos comandos no arquivo `install.sh`.
+* Caso não queira que um programa não seja instalado basta comentar a linha referente a sua instalação colocando `#` no início da linha ou você pode simplesmente deletá-la.
 
 ## Executando o script &#128163;
 
 ### Atenção &#9760;
 
-Esteja ciente de que esse script está com minhas configurações pessoais e que seria interesssante você dar uma olhada nele antes de executá-lo. Há alguns pontos importantes em que você precisa estar somente atento e outros que exigem mudanças no código.
+Esteja ciente de que esse script está com minhas configurações pessoais e os arquivos que precisam ser baixados para instalações sem gerenciadores de pacotes podem estar um uma versão mais atualizada (por consequência a versão no script não está mais disponível). É interesssante você dar uma olhada no script antes de executá-lo. Há alguns pontos importantes em que você precisa estar atento:
 
-* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório é necessário alterar o caminho dos SDKs.
-* Mesmo que mantenha `~/Android/Sdk` como o diretório dos SDKs você ainda precisa alterar `/home/lucasmc64` para a sua home... Ainda não consegui fazer isso automaticamente.
-* Caso tenha alterado o diretório de SDKs `~/Android/Sdk` atente-se a usá-lo na primeira inicialização do Android Studio.
-* O script não baixa a versão mais recente do JDK8, mais especificamente baixa a versão 1.8.0-241. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
+* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório é necessário alterar o caminho dos SDKs e atente-se a usá-lo na primeira inicialização do Android Studio.
+* O script não baixa a versão mais recente do JDK8, mais especificamente baixa a versão 1.8.0-261. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
+* Como o script não baixa a versão mais recente do JDK 8, é necessário alterar as versões no script conforme a versão no servidor é atializada. Caso o script dê erro por não encontrar o JDK 8 no servidor, pode ser hora disso acontecer. Abra o arquivo *./others/jdk8.sh*, procure pelo número da versão e compare com o que está hospedado no [servidor](http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8). Caso não sejam as mesmas versões basta substituir o número da versão mais nova no script, ele funcionará normalmente.
 * Altere as configurações de conta do git para as suas configurações pessoais.
 
 ### Mão na massa &#129302;
@@ -137,7 +132,7 @@ Como isso envolve uma troca de Shells não há como fazer via script, mas segue 
 8. Acesse e baixe a versão mais recente do **Fira Code**: `https://github.com/ryanoasis/nerd-fonts/releases/`.
 9. Extraia o .zip.
 10. Recorte a pasta.
-11. Cole a pasta no diretório `**/usr/share/fonts/truetype**`.
+11. Cole a pasta no diretório **~/.fonts**.
 12. Acesse as configurações do terminal e defina `FiraCode Nerd Font Retina` como sua fonte.
 
 #### Tema Spaceship
@@ -181,27 +176,17 @@ SPACESHIP_CHAR_SUFFIX=" "
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
-zplugin light zsh-users/zsh-history-substring-search
-zplugin light buonomo/yarn-completion
+zinit light zsh-users/zsh-history-substring-search
+zinit light buonomo/yarn-completion
 ```
-
-#### Hyper Terminal
-
-23. Abra o Hyper.
-24. Clique no *Menu*, selecione *Plugins* e clique em **Install Hyper CLI command in PATH**.
-25. Digite no Hyper `hyper i hyper-dracula`.
-26. Clique no *Menu*, selecione *Edit* e clique em **Preferences**.
-27. Em `fontFamily` adicione `"FiraCode Nerd Font"` antes das outras fontes.
-28. Digite no Hyper `hyper i hyper-font-ligatures`, `hyper i hyper-search`.
-29. Caso o Hyper apresente uma `%` aleatória no terminal, abra o arquivo *.zshrc* e adicione a linha `unsetopt PROMPT_SP` no final do arquivo.
 
 #### Comando `ls` colorido
 
-30. Execute `sudo gem install colorls`.
-31. Abra o arquivo *.zshrc* e adicione a linha `source $(dirname $(gem which colorls))/tab_complete.sh` no final do arquivo.
-32. Abra o gerenciador de arquivos entre no diretório *~/.config* e crie uma pasta chamada **colorls**.
-33. Execute `cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml`.
-34. Abra o arquivo *~/.config/colorls/dark_colors.yaml* e adicione/substitua as seguintes linhas:
+23. Execute `sudo gem install colorls`.
+24. Abra o arquivo *.zshrc* e adicione a linha `source $(dirname $(gem which colorls))/tab_complete.sh` no final do arquivo.
+25. Abra o gerenciador de arquivos entre no diretório *~/.config* e crie uma pasta chamada **colorls**.
+26. Execute `cp $(dirname $(gem which colorls))/yaml/dark_colors.yaml ~/.config/colorls/dark_colors.yaml`.
+27. Abra o arquivo *~/.config/colorls/dark_colors.yaml* e adicione/substitua as seguintes linhas:
 
 ```shell
 # Main Colors
@@ -210,7 +195,7 @@ recognized_file:   turquoise
 dir:               dodgerblue
 ```
 
-35. Agora abra o arquivo *~/zshrc* e adicione as seguintes linhas no final do arquivo:
+28. Agora abra o arquivo *~/zshrc* e adicione as seguintes linhas no final do arquivo:
 
 ```shell
 alias ls='colorls -h --group-directories-first -1'
@@ -308,13 +293,3 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 5. Selecione o emulador, avance.
 6. Abra as intruções sobre o KVM, finalize.
 7. Após finalizarem as instalações baixe o SDK 28 (usado no Ract atualmente) e o que mais for necessário.
-
-<!--
-
-Ainda instalar:
-
-Tema no Gnome
-Grub - Tema no Grub
-Dracula Theme no que puder
-
--->
