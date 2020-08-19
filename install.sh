@@ -72,7 +72,6 @@ sudo ./scripts/snap/update.sh
 
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
-./scripts/flatpak/android-studio.sh
 ./scripts/flatpak/audacity.sh
 ./scripts/flatpak/blender.sh
 ./scripts/flatpak/code-blocks.sh
@@ -104,7 +103,7 @@ sudo ./scripts/others/yarn.sh
 
 # => Android Studio
 
-sudo ./scripts/settings/android-studio.sh
+./scripts/settings/android-studio.sh
 
 # => Git
 
