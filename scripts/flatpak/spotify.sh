@@ -8,10 +8,10 @@ COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
-# => Unrar
+# => Spotify
 
 echo "${COLOR_BLUE}"
-echo "=> Instalando Unrar"
+echo "=> Instalando Spotify "
 echo "${COLOR_RESET}"
 
-sudo apt install unrar -y
+flatpak install com.spotify.Client -y

@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-# -+-+-+-+-+- Variáveis -+-+-+-+-+-
+# => Variáveis
 
 COLOR_RED=`tput setaf 1`
 COLOR_GREEN=`tput setaf 2`
@@ -9,11 +8,10 @@ COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
-
-# -+-+-+-+-+- PostgreSQL -+-+-+-+-+-
+# => PostgreSQL
 
 echo "${COLOR_BLUE}"
-echo "-+-+-+-+-+- Instalando PostgreSQL -+-+-+-+-+-"
+echo "=> Instalando PostgreSQL"
 echo "${COLOR_RESET}"
 
 sudo sh -c 'echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
