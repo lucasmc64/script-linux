@@ -3,7 +3,7 @@
 # Este script está sendo criado no Pop!_OS 20.04. Possivelmente irá funcionar em outro SO baseado no Ubuntu ou Debian.
 
 
-# -+-+-+-+-+- Variáveis -+-+-+-+-+-
+# => Variáveis
 
 COLOR_RED=`tput setaf 1`
 COLOR_GREEN=`tput setaf 2`
@@ -12,24 +12,24 @@ COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
 
-# -+-+-+-+-+- Iniciando instalações -+-+-+-+-+-
+# => Iniciando instalações
 
 echo "${COLOR_BLUE}"
-echo "-+-+-+-+-+- Iniciando instalações -+-+-+-+-+-"
+echo "=> Iniciando instalações"
 echo "${COLOR_RESET}"
 
 
-# -+-+-+-+-+- Configurando o ambiente -+-+-+-+-+-
+# => Configurando o ambiente
 
 echo "${COLOR_BLUE}"
-echo "-+-+-+-+-+- Configurando o ambiente -+-+-+-+-+-"
+echo "=> Configurando o ambiente"
 echo "${COLOR_RESET}"
 
 mkdir ~/Android
 mkdir ~/Android/Sdk
 
 
-# -+-+-+-+-+- APT -+-+-+-+-+-
+# => APT 
 
 sudo ./scripts/apt/update.sh
 sudo ./scripts/apt/curl.sh
@@ -46,6 +46,7 @@ sudo ./scripts/apt/kvm.sh
 sudo ./scripts/apt/libs-graficas.sh
 sudo ./scripts/apt/node.sh
 sudo ./scripts/apt/obs-studio.sh
+sudo ./scripts/apt/opera.sh
 sudo ./scripts/apt/postgresql.sh
 sudo ./scripts/apt/python.sh
 sudo ./scripts/apt/ruby.sh
@@ -60,15 +61,14 @@ sudo ./scripts/apt/flatpak.sh
 sudo ./scripts/apt/snapd.sh
 sudo ./scripts/apt/update.sh
 
-# -+-+-+-+-+- SNAP -+-+-+-+-+-
+# => SNAP 
 
 sudo ./scripts/snap/update.sh
-sudo ./scripts/snap/opera-developer.sh
 sudo ./scripts/snap/sosumi.sh
 sudo ./scripts/snap/vlc.sh
 sudo ./scripts/snap/update.sh
 
-# -+-+-+-+-+- Flatpak -+-+-+-+-+-
+# => Flatpak 
 
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
@@ -86,7 +86,7 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/telegram.sh
 ./scripts/flatpak/update.sh
 
-# -+-+-+-+-+- Others -+-+-+-+-+-
+# => Others
 
 sudo ./scripts/others/expo.sh
 sudo ./scripts/others/free-download-manager.sh
@@ -99,7 +99,7 @@ sudo ./scripts/others/postbird.sh
 sudo ./scripts/others/react.sh
 sudo ./scripts/others/yarn.sh
 
-# -+-+-+-+-+- Settings -+-+-+-+-+-
+# => Settings 
 
 # => Android Studio
 
@@ -121,9 +121,9 @@ sudo ./scripts/others/yarn.sh
 
 ./scripts/settings/yarn.sh
 
-# -+-+-+-+-+- Finalizando instalações -+-+-+-+-+-
+# => Finalizando instalações 
 
 echo "${COLOR_GREEN}"
-echo "-+-+-+-+-+- Finalizando instalações -+-+-+-+-+-"
-echo "-+-+-+-+- Leia o README para terminar -+-+-+-+-"
+echo "=> Finalizando instalações"
+echo "=> Leia o README para terminar"
 echo "${COLOR_RESET}"
