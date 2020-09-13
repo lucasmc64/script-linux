@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-# -+-+-+-+-+- Variáveis -+-+-+-+-+-
+# => Variáveis
 
 COLOR_RED=`tput setaf 1`
 COLOR_GREEN=`tput setaf 2`
@@ -9,11 +8,10 @@ COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
-
-# -+-+-+-+-+- JDK 8 -+-+-+-+-+-
+# => JDK 8
 
 echo "${COLOR_BLUE}"
-echo "-+-+-+-+-+- Instalando JDK 8 -+-+-+-+-+-"
+echo "=> Instalando JDK 8"
 echo "${COLOR_RESET}"
 
 wget -O jdk-8u261-linux-x64.tar.gz http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u261-linux-x64.tar.gz

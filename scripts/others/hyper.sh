@@ -8,10 +8,13 @@ COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
-# => Expo
+# => Hyper
 
 echo "${COLOR_BLUE}"
-echo "=> Instalando Expo CLI"
+echo "=> Instalando Hyper"
 echo "${COLOR_RESET}"
 
-sudo npm install --global expo-cli
+wget -O hyper.deb https://releases.hyper.is/download/deb
+sudo dpkg -i ./hyper.deb
+sudo rm -rf ./hyper.deb
+sudo apt --fix-broken install -y
