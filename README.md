@@ -26,12 +26,15 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Krita
 * (APT) KVM
 * (APT) Libs Gráficas
+* (APT) Lutris
 * (APT) Node.JS
 * (APT) OBS Studio
+* (APT) Opera
 * (APT) PostgreSQL
 * (APT) Python 3
 * (APT) Ruby
 * (APT) Sqlite
+* (APT) Steam
 * (APT) Typora
 * (APT) Unrar
 * (APT) Vim
@@ -40,7 +43,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) ZSH
 * (APT) Suporte a Flatpak (EXTRA: caso a distro não tenha)
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
-* (SNAP) Opera Developer
+* (SNAP) Open Drive
 * (SNAP) Sosumi
 * (SNAP) VLC
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
@@ -49,12 +52,15 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) Code::Blocks
 * (FLATPAK) DarkTable
 * (FLATPAK) Discord
-* (FLATPAK) Ferdi
+* (FLATPAK) Foliate
 * (FLATPAK) GIMP
 * (FALTPAK) InkScape
 * (FLATPAK) LibreOffice
+* (FLATPAK) LibreSprite
 * (FLATPAK) NetBeans
+* (FLATPAK) Pixelorama
 * (FLATPAK) RawTherapee
+* (FLATPAK) Spotify
 * (FLATPAK) Telegram
 * (OTHER) Expo
 * (OTHER) Free Download Manager
