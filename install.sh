@@ -44,6 +44,7 @@ sudo ./scripts/apt/insomnia.sh
 sudo ./scripts/apt/krita.sh
 sudo ./scripts/apt/kvm.sh
 sudo ./scripts/apt/libs-graficas.sh
+sudo ./scripts/apt/lutris.sh
 sudo ./scripts/apt/node.sh
 sudo ./scripts/apt/obs-studio.sh
 sudo ./scripts/apt/opera.sh
@@ -51,6 +52,7 @@ sudo ./scripts/apt/postgresql.sh
 sudo ./scripts/apt/python.sh
 sudo ./scripts/apt/ruby.sh
 sudo ./scripts/apt/sqlite.sh
+sudo ./scripts/apt/steam.sh
 sudo ./scripts/apt/typora.sh
 sudo ./scripts/apt/unrar.sh
 sudo ./scripts/apt/vim.sh
@@ -64,6 +66,7 @@ sudo ./scripts/apt/update.sh
 # => SNAP 
 
 sudo ./scripts/snap/update.sh
+sudo ./scripts/snap/odrive.sh
 sudo ./scripts/snap/sosumi.sh
 sudo ./scripts/snap/vlc.sh
 sudo ./scripts/snap/update.sh
@@ -77,10 +80,13 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/code-blocks.sh
 ./scripts/flatpak/darktable.sh
 ./scripts/flatpak/discord.sh
+./scripts/flatpak/foliate.sh
 ./scripts/flatpak/gimp.sh
 ./scripts/flatpak/inkscape.sh
 ./scripts/flatpak/libreoffice.sh
+./scripts/flatpak/libresprite.sh
 ./scripts/flatpak/netbeans.sh
+./scripts/flatpak/pixelorama.sh
 ./scripts/flatpak/rawtherapee.sh
 ./scripts/flatpak/spotify.sh
 ./scripts/flatpak/telegram.sh
@@ -90,7 +96,6 @@ sudo ./scripts/snap/update.sh
 
 sudo ./scripts/others/expo.sh
 sudo ./scripts/others/free-download-manager.sh
-sudo ./scripts/others/hyper.sh
 sudo ./scripts/others/jdk8.sh
 sudo ./scripts/others/jetbrains-toolbox.sh
 ./scripts/others/joplin.sh
