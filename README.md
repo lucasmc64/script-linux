@@ -108,7 +108,7 @@ Esteja ciente de que esse script está com minhas configurações pessoais e pod
 
 Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
 
-### Itch
+### Itch &#128377;
 
 É necessário deletar manualmente seu instalador.
 
@@ -233,7 +233,7 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 3. Autorizar ela a usar o GitHub.
 4. Baixar as configurações (SHIFT + ALT + D).
 
-### Telegram
+### Telegram &#128172;
 
 1. Abrir o Telegram.
 2. Abra o menu e clique em *Settings*.
