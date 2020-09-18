@@ -1,12 +1,12 @@
+![Linux Dev WorkStation](./readme-images/capa.svg)
+
 # Script de instalação &#128220;
 
 ## Motivação &#129300;
 
-Minha história com Linux tem sido... complicada e cheia de formatações. Gosto de configurar as coisas do meu jeitinho, mas fazer isso várias vezes em um ano se tornou desgastante demais, por isso criei este script e detalhei mais abaixo as configurações que faço (é muita coisa para lembrar).
+Formatações podem ser desgastantes, por isso criei este script e detalhei mais abaixo as configurações que faço.
 
-## Considerações iniciais &#129488;
-
-Esse script foi feito e testado no Pop!_OS 20.04. É provável que funcione em qualquer outra distro baseada no Ubuntu 20.04 (e ambiente GNOME quanto aos programas Gnome Boxes e Gnome Tweaks).
+> Esse script foi feito e testado no *Pop!_OS 20.04*.
 
 ## O que o script faz exatamente? &#129323;
 
@@ -80,30 +80,27 @@ Além disso ele habilita os emojis do Yarn, faz as principais configurações do
 
 > Ainda é necessário abrir o Typora e habilitar o tema.
 
-### Observações &#128269;
-
-* Caso queira alterar a ordem de instalação dos programas basta alterar a ordem dos comandos no arquivo `install.sh`.
-* Caso não queira que um programa não seja instalado basta comentar a linha referente a sua instalação colocando `#` no início da linha ou você pode simplesmente deletá-la.
-
 ## Executando o script &#128163;
 
 ### Atenção &#9760;
 
-Esteja ciente de que esse script está com minhas configurações pessoais e os arquivos que precisam ser baixados para instalações sem gerenciadores de pacotes podem estar um uma versão mais atualizada (por consequência a versão no script não está mais disponível). É interesssante você dar uma olhada no script antes de executá-lo. Há alguns pontos importantes em que você precisa estar atento:
+Esteja ciente de que esse script está com minhas configurações pessoais e pode ser que o script quebre caso algum app tenha que não é existe nos gerenciadores de pacotes tenha atualizado.
 
-* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório é necessário alterar o caminho dos SDKs e atente-se a usá-lo na primeira inicialização do Android Studio.
-* O script não baixa a versão mais recente do JDK8, mais especificamente baixa a versão 1.8.0-261. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
-* Como o script não baixa a versão mais recente do JDK 8, é necessário alterar as versões no script conforme a versão no servidor é atializada. Caso o script dê erro por não encontrar o JDK 8 no servidor, pode ser hora disso acontecer. Abra o arquivo *./others/jdk8.sh*, procure pelo número da versão e compare com o que está hospedado no [servidor](http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8). Caso não sejam as mesmas versões basta substituir o número da versão mais nova no script, ele funcionará normalmente.
-* Altere as configurações de conta do git para as suas configurações pessoais.
+É interesssante você dar uma olhada no script antes de executá-lo. Há alguns pontos importantes em que você precisa estar atento:
+
+* Acesse o arquivo `./scripts/settings/android-studio.sh` e em `CURRENT_USER` altere para o nome do seu usuário.
+* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório acesse o arquivo `./scripts/settings/android-studio.sh`.
+* O script não baixa a versão mais recente do JDK8, mas sim a versão 1.8.0-261. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
+* Como o script não baixa a versão mais recente do JDK 8, é necessário alterar as versões no script conforme a versão nesse servidor extraoficial é atualizada. Caso o script dê erro por não encontrar o JDK 8 no servidor, abra o arquivo *./others/jdk8.sh*, procure pelo número da versão e compare com o que está hospedado no [servidor](http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8). Caso não sejam as mesmas versões basta substituir o número da versão mais nova no script, ele funcionará normalmente.
+* Acesse o arquivo `./scripts/settings/git.sh` e altere as configurações de conta do git para as suas configurações pessoais.
+* O tema Dracula para o Typora só é instalado caso você já tenha aberto o app pela promeira vez para ele criar as pastas de configurações. Tente abri-lo assim que instalado para tudo correr bem.
 
 ### Mão na massa &#129302;
 
-> Antes de instalar altere no arquivo ./scripts/settings.sh suas configurações do Git.
-
 1. Baixe o arquivo *.zip* ou clone esse repositório.
-2. Abra o termina na pasta em que você extraiu ou clonou, não dentro da pasta resultante (*script-linux*).
+2. Abra o terminal na pasta em que você extraiu ou clonou esse repositório (não dentro da pasta resultante *script-linux*).
 3. Execute o comando `sudo chmod -R a+x ./script-linux/` para dar as permissões para a execução do script.
-4. Entre na pasta *script-linux* pelo terminal e dê o comando `sudo ./install.sh` para instalar tudo.
+4. Entre na pasta *script-linux* pelo terminal e dê o comando `./install.sh`.
 
 ## Minhas configurações manuais e downloads extras &#128406;
 
@@ -111,9 +108,13 @@ Esteja ciente de que esse script está com minhas configurações pessoais e os 
 
 Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
 
+### Itch
+
+É necessário deletar manualmente seu instalador.
+
 ### Terminal &#129499;
 
-Como isso envolve uma troca de Shells não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal.
+Como isso envolve uma troca de Shells e reinicialização do computador, não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal.
 
 > Obs.: O ZSH já foi instalado, agora precisamos trocar o Bash por ele.
 
@@ -209,7 +210,7 @@ alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
 ```
 
-### Firefox, Google Chrome, Vivaldi, Opera, Zenkit, Zenkit To-Do, Discord, Ferdi, Telegram &#129680;
+### Firefox, Google Chrome, Vivaldi, Opera, Steam, Itch, Open Drive, Discord &#129680;
 
 1. Abrir os respectivos programas..
 2. Logar com a conta pessoal para a sincronização das informações.
@@ -230,9 +231,16 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 1. Abrir o Visual Studio Code.
 2. Instalar a extensão *Settings Sync*.
 3. Autorizar ela a usar o GitHub.
-3. Baixar as configurações (SHIFT + ALT + D).
+4. Baixar as configurações (SHIFT + ALT + D).
 
-> Há o tema *Dracula* para o Visual Studio Code, basta pesquisar na seção de Plugins... Mas prefiro o tema *Horizon*.
+### Telegram
+
+1. Abrir o Telegram.
+2. Abra o menu e clique em *Settings*.
+3. Escolha *Chat Settings* e, em *Chat background*, clique em *Choose from file*.
+4. Na janela que se abre procure pelo arquivo *colors.tdesktop-theme* na pasta *telegram* que foi baixada dentro da pasta do script (*script-linux*).
+5. Escolha uma imagem de fundo para combinar com o tema.
+6. Caso queira, pode deletar a pasta do tema.
 
 ### Typora &#128196;
 
@@ -276,7 +284,7 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 ### JetBrains Toolbox &#129520;
 
 1. Abra o JetBrains Toolbox.
-2. Instale: Android Studio, PHPStorm, WebSorm, IntelliJ Professional, PyCharm Professional.
+2. Instale os apps necessários.
 
 ### Joplin &#9997;
 
@@ -291,7 +299,8 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 
 `/home/lucasmc64/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6626763/bin`
 
-> A adição desse caminho possibilita a execução do Android Studio diretamente pelo terminal com o comando studio.sh.
+> Altere o caminho de acordo com a versão instalada por você.
+> Obs.: A adição desse caminho possibilita a execução do Android Studio diretamente pelo terminal com o comando studio.sh.
 
 2. Abra o Android Studio.
 3. Selecione *Custom* na instalação das dependências, avance.
