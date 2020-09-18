@@ -109,7 +109,7 @@ sudo ./scripts/others/yarn.sh
 
 # => Android Studio
 
-./scripts/settings/android-studio.sh
+sudo ./scripts/settings/android-studio.sh
 
 # => Git
 
@@ -118,6 +118,10 @@ sudo ./scripts/others/yarn.sh
 # => KVM
 
 ./scripts/settings/kvm.sh
+
+# => Telegram
+
+./scripts/settings/telegram.sh
 
 # => Typora
 
