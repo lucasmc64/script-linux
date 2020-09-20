@@ -312,3 +312,11 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 ### RClone
 
 1. Acesse [https://rclone.org/docs/](https://rclone.org/docs/) para configurá-lo.
+
+### PostgreSQL
+
+1. Execute `ps -ef | grep postgres`
+2. Execute `sudo su - postgres`
+3. Execute `createuser -EPd lucasmc64` (lucasmc64 é o nome de usuário que escolhi) e dê a senha que desejar
+4. Feche o terminal e abra novamente
+5. Execute `psql -U lucasmc64 -h127.0.0.1 postgres`
