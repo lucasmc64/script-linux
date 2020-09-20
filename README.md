@@ -43,7 +43,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) ZSH
 * (APT) Suporte a Flatpak (EXTRA: caso a distro não tenha)
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
-* (SNAP) Open Drive
 * (SNAP) Sosumi
 * (SNAP) VLC
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
@@ -69,6 +68,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) Joplin
 * (OTHER) Microsoft Teams
 * (OTHER) Postbird
+* (OTHER) RClone
 * (OTHER) React
 * (OTHER) Yarn
 
