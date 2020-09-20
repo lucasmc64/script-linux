@@ -66,7 +66,6 @@ sudo ./scripts/apt/update.sh
 # => SNAP 
 
 sudo ./scripts/snap/update.sh
-sudo ./scripts/snap/odrive.sh
 sudo ./scripts/snap/sosumi.sh
 sudo ./scripts/snap/vlc.sh
 sudo ./scripts/snap/update.sh
@@ -102,6 +101,7 @@ sudo ./scripts/others/jetbrains-toolbox.sh
 ./scripts/others/joplin.sh
 sudo ./scripts/others/microsoft-teams.sh
 sudo ./scripts/others/postbird.sh
+sudo ./scripts/others/rclone.sh
 sudo ./scripts/others/react.sh
 sudo ./scripts/others/yarn.sh
 
