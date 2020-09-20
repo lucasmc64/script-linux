@@ -308,3 +308,7 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 5. Selecione o emulador, avance.
 6. Abra as intruções sobre o KVM, finalize.
 7. Após finalizarem as instalações baixe o SDK 28 (usado no Ract atualmente) e o que mais for necessário.
+
+### RClone
+
+1. Acesse [https://rclone.org/docs/](https://rclone.org/docs/) para configurá-lo.
