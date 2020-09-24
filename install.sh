@@ -2,7 +2,6 @@
 
 # Este script está sendo criado no Pop!_OS 20.04. Possivelmente irá funcionar em outro SO baseado no Ubuntu ou Debian.
 
-
 # => Variáveis
 
 COLOR_RED=`tput setaf 1`
@@ -11,13 +10,11 @@ COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
-
 # => Iniciando instalações
 
 echo "${COLOR_BLUE}"
 echo "=> Iniciando instalações"
 echo "${COLOR_RESET}"
-
 
 # => Configurando o ambiente
 
@@ -27,7 +24,6 @@ echo "${COLOR_RESET}"
 
 mkdir ~/Android
 mkdir ~/Android/Sdk
-
 
 # => APT 
 
@@ -82,6 +78,7 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/foliate.sh
 ./scripts/flatpak/gimp.sh
 ./scripts/flatpak/inkscape.sh
+./scripts/flatpak/kdenlive.sh
 ./scripts/flatpak/libreoffice.sh
 ./scripts/flatpak/libresprite.sh
 ./scripts/flatpak/netbeans.sh
