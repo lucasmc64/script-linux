@@ -93,7 +93,6 @@ sudo ./scripts/others/expo.sh
 sudo ./scripts/others/free-download-manager.sh
 sudo ./scripts/others/itch.sh
 sudo ./scripts/others/jdk8.sh
-./scripts/others/joplin.sh
 sudo ./scripts/others/postbird.sh
 sudo ./scripts/others/rclone.sh
 sudo ./scripts/others/react.sh

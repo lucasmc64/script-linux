@@ -63,7 +63,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) Expo
 * (OTHER) Free Download Manager
 * (OTHER) JDK 8
-* (OTHER) Joplin
 * (OTHER) Postbird
 * (OTHER) RClone
 * (OTHER) React
