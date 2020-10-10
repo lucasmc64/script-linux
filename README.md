@@ -21,7 +21,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Gnome Boxes
 * (APT) Gnome Tweaks
 * (APT) Google Chrome
-* (APT) Haskell
 * (APT) Insomnia Core
 * (APT) Krita
 * (APT) KVM

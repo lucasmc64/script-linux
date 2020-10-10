@@ -35,7 +35,6 @@ sudo ./scripts/apt/firefox.sh
 sudo ./scripts/apt/gnome-boxes.sh
 sudo ./scripts/apt/gnome-tweaks.sh
 sudo ./scripts/apt/google-chrome.sh
-sudo ./scripts/apt/haskell.sh
 sudo ./scripts/apt/insomnia.sh
 sudo ./scripts/apt/krita.sh
 sudo ./scripts/apt/kvm.sh
