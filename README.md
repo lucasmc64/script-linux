@@ -47,7 +47,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
 * (FLATPAK) Audacity
 * (FLATPAK) Blender
-* (FLATPAK) Code::Blocks
 * (FLATPAK) DarkTable
 * (FLATPAK) Discord
 * (FLATPAK) Foliate

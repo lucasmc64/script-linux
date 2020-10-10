@@ -71,7 +71,6 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/flathub.sh
 ./scripts/flatpak/audacity.sh
 ./scripts/flatpak/blender.sh
-./scripts/flatpak/code-blocks.sh
 ./scripts/flatpak/darktable.sh
 ./scripts/flatpak/discord.sh
 ./scripts/flatpak/foliate.sh
