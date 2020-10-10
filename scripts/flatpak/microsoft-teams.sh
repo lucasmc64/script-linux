@@ -14,7 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Microsoft Teams"
 echo "${COLOR_RESET}"
 
-wget -O msteams.deb https://go.microsoft.com/fwlink/p/?linkid=2112886&clcid=0x409&culture=en-us&country=us
-sudo dpkg -i ./msteams.deb
-sudo rm -rf ./msteams.deb
-sudo apt --fix-broken install -y
+flatpak install com.microsoft.Teams -y

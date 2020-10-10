@@ -79,6 +79,7 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/kdenlive.sh
 ./scripts/flatpak/libreoffice.sh
 ./scripts/flatpak/libresprite.sh
+./scripts/others/microsoft-teams.sh
 ./scripts/flatpak/netbeans.sh
 ./scripts/flatpak/pixelorama.sh
 ./scripts/flatpak/rawtherapee.sh
@@ -93,7 +94,6 @@ sudo ./scripts/others/free-download-manager.sh
 sudo ./scripts/others/itch.sh
 sudo ./scripts/others/jdk8.sh
 ./scripts/others/joplin.sh
-sudo ./scripts/others/microsoft-teams.sh
 sudo ./scripts/others/postbird.sh
 sudo ./scripts/others/rclone.sh
 sudo ./scripts/others/react.sh

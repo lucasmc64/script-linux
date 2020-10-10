@@ -54,6 +54,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FALTPAK) InkScape
 * (FLATPAK) LibreOffice
 * (FLATPAK) LibreSprite
+* (FLATPAK) Microsoft Teams
 * (FLATPAK) NetBeans
 * (FLATPAK) Pixelorama
 * (FLATPAK) RawTherapee
@@ -63,7 +64,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) Free Download Manager
 * (OTHER) JDK 8
 * (OTHER) Joplin
-* (OTHER) Microsoft Teams
 * (OTHER) Postbird
 * (OTHER) RClone
 * (OTHER) React
