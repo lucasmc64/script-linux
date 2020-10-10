@@ -62,7 +62,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) Expo
 * (OTHER) Free Download Manager
 * (OTHER) JDK 8
-* (OTHER) JetBrains ToolBox
 * (OTHER) Joplin
 * (OTHER) Microsoft Teams
 * (OTHER) Postbird

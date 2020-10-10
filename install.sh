@@ -92,7 +92,6 @@ sudo ./scripts/others/expo.sh
 sudo ./scripts/others/free-download-manager.sh
 sudo ./scripts/others/itch.sh
 sudo ./scripts/others/jdk8.sh
-sudo ./scripts/others/jetbrains-toolbox.sh
 ./scripts/others/joplin.sh
 sudo ./scripts/others/microsoft-teams.sh
 sudo ./scripts/others/postbird.sh
