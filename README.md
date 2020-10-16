@@ -60,6 +60,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) RawTherapee
 * (FLATPAK) Spotify
 * (FLATPAK) Telegram
+* (OTHER) Android Studio
 * (OTHER) Expo
 * (OTHER) Free Download Manager
 * (OTHER) JDK 8

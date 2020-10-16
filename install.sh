@@ -89,6 +89,7 @@ sudo ./scripts/snap/update.sh
 
 # => Others
 
+sudo ./scripts/others/android-studio.sh
 sudo ./scripts/others/expo.sh
 sudo ./scripts/others/free-download-manager.sh
 sudo ./scripts/others/itch.sh
