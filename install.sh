@@ -53,6 +53,7 @@ sudo ./scripts/apt/unrar.sh
 sudo ./scripts/apt/vim.sh
 sudo ./scripts/apt/visual-studio-code.sh
 sudo ./scripts/apt/vivaldi.sh
+sudo ./scripts/apt/vlc.sh
 sudo ./scripts/apt/zsh.sh
 sudo ./scripts/apt/flatpak.sh
 sudo ./scripts/apt/snapd.sh
@@ -62,7 +63,6 @@ sudo ./scripts/apt/update.sh
 
 sudo ./scripts/snap/update.sh
 sudo ./scripts/snap/sosumi.sh
-sudo ./scripts/snap/vlc.sh
 sudo ./scripts/snap/update.sh
 
 # => Flatpak 

@@ -39,11 +39,11 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Vim
 * (APT) Visual Studio Code
 * (APT) Vivaldi
+* (APT) VLC
 * (APT) ZSH
 * (APT) Suporte a Flatpak (EXTRA: caso a distro não tenha)
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
 * (SNAP) Sosumi
-* (SNAP) VLC
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
 * (FLATPAK) Audacity
 * (FLATPAK) Blender
