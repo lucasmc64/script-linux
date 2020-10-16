@@ -292,19 +292,13 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 
 ### Android Studio &#9879;
 
-1. Adicione nas variáveis de ambiente o seguinte caminho (alterando o número da versão do Android Studio):
-
-`/home/lucasmc64/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6626763/bin`
-
-> Altere o caminho de acordo com a versão instalada por você.
-> Obs.: A adição desse caminho possibilita a execução do Android Studio diretamente pelo terminal com o comando studio.sh.
-
-2. Abra o Android Studio.
-3. Selecione *Custom* na instalação das dependências, avance.
-4. Coloque a pasta correta do JDK, avance.
-5. Selecione o emulador, avance.
-6. Abra as intruções sobre o KVM, finalize.
-7. Após finalizarem as instalações baixe o SDK 28 (usado no Ract atualmente) e o que mais for necessário.
+1. Rode o Android Studio com o comando *studio.sh* no terminal.
+2. Selecione *Custom* na instalação das dependências, avance.
+3. Coloque a pasta correta do JDK, avance.
+4. Selecione o emulador, avance.
+5. Abra as intruções sobre o KVM, finalize.
+6. Após finalizarem as instalações obrigatórias clique em *Configure* e, em seguida, *Create Desktop Entry* para o Android Studio aparecer no menu da distro.
+7. Baixe o SDK 28 (usado no React atualmente) e o que mais for necessário.
 
 ### RClone
 
