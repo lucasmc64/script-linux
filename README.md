@@ -52,6 +52,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) Foliate
 * (FLATPAK) GIMP
 * (FALTPAK) InkScape
+* (FALTPAK) Kdenlive
 * (FLATPAK) LibreOffice
 * (FLATPAK) LibreSprite
 * (FLATPAK) Microsoft Teams
@@ -63,6 +64,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) Android Studio
 * (OTHER) Expo
 * (OTHER) Free Download Manager
+* (OTHER) Itch
 * (OTHER) JDK 8
 * (OTHER) Postbird
 * (OTHER) RClone
@@ -207,11 +209,6 @@ alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
 ```
 
-### Firefox, Google Chrome, Vivaldi, Opera, Steam, Itch, Open Drive, Discord &#129680;
-
-1. Abrir os respectivos programas..
-2. Logar com a conta pessoal para a sincronização das informações.
-
 ### Insomnia Core &#128299;
 
 1. Abra o Insomnia Core.
@@ -225,44 +222,38 @@ alias ll='colorls --group-directories-first --almost-all --long'
 
 Recomendo a extensão Settings Sync para salvar as configurações.
 
-1. Abrir o Visual Studio Code.
-2. Instalar a extensão *Settings Sync*.
-3. Autorizar ela a usar o GitHub.
-4. Baixar as configurações (SHIFT + ALT + D).
+1. Instalar a extensão *Settings Sync*.
+2. Autorizar ela a usar o GitHub.
+3. Baixar as configurações (SHIFT + ALT + D).
 
 ### Telegram &#128172;
 
-1. Abrir o Telegram.
-2. Abra o menu e clique em *Settings*.
-3. Escolha *Chat Settings* e, em *Chat background*, clique em *Choose from file*.
-4. Na janela que se abre procure pelo arquivo *colors.tdesktop-theme* na pasta *telegram* que foi baixada dentro da pasta do script (*script-linux*).
-5. Escolha uma imagem de fundo para combinar com o tema.
-6. Caso queira, pode deletar a pasta do tema.
+1. Abra o menu e clique em *Settings*.
+2. Escolha *Chat Settings* e, em *Chat background*, clique em *Choose from file*.
+3. Na janela que se abre procure pelo arquivo *colors.tdesktop-theme* na pasta *telegram* que foi baixada dentro da pasta do script (*script-linux*).
+4. Escolha uma imagem de fundo para combinar com o tema.
+5. Caso queira, pode deletar a pasta do tema.
 
 ### Typora &#128196;
 
-1. Abrir o Typora.
-2. Clicar no menu *Temas* e escolher *Dracula*.
+1. Clicar no menu *Temas* e escolher *Dracula*.
 
 ### Sosumi &#129405;
 
-1. Abrir o terminal.
-2. Digitar `sosumi` e esperar que o download se conclua.
+1. Digitar `sosumi` e esperar que o download se conclua.
 
 ### Spotify &#127911;
 
-1. Abrir o Spotify.
-2. Colocar as playlists para baixar.
+1. Colocar as playlists para baixar.
 
 ### Configurações do Gnome &#128736;
 
-1. Abrir as configurações do Gnome.
-2. Na aba *Aparência* importe e defina o papel de parede.
-3. Na aba *Privacidade* selecione *Histórico de arquivos e lixeira* e desmarque a opção **Histórico de arquivos**.
-4. Na aba *Energia* altere o tempo para que a tela se apague para **15min**.
-5. Na aba *Telas* selecione **Luz noturna** e habilite-a.
-6. Na aba *Mouse e Touchpad* desligue a **Rolagem Natural**.
-7. Na aba *Usuários* altere a **foto de perfil**.
+1. Na aba *Aparência* importe e defina o papel de parede.
+2. Na aba *Privacidade* selecione *Histórico de arquivos e lixeira* e desmarque a opção **Histórico de arquivos**.
+3. Na aba *Energia* altere o tempo para que a tela se apague para **15min**.
+4. Na aba *Telas* selecione **Luz noturna** e habilite-a.
+5. Na aba *Mouse e Touchpad* desligue a **Rolagem Natural**.
+6. Na aba *Usuários* altere a **foto de perfil**.
 
 ### Gnome Tweaks &#128295;
 
@@ -274,21 +265,8 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 
 ### Free Download Manager &#128722;
 
-1. Abrir o Free Download Manager.
-2. Clicar no menu hamburguer e escolher *Preferências*.
-3. Mude então para o tema escuro.
-
-### JetBrains Toolbox &#129520;
-
-1. Abra o JetBrains Toolbox.
-2. Instale os apps necessários.
-
-### Joplin &#9997;
-
-1. Abrir o Joplin.
-2. Clicar no menu *Ferramentas* e escolher *Opções*.
-3. Na janela que se abre, na aba *Sincronização* defnina qual nuvem o programa usará e o autorize.
-4. Agora, na aba Aparência coloque o tema *Escuro* ou *Dracula*.
+1. Clicar no menu hamburguer e escolher *Preferências*.
+2. Mude então para o tema escuro.
 
 ### Android Studio &#9879;
 
