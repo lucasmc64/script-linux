@@ -79,7 +79,7 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/kdenlive.sh
 ./scripts/flatpak/libreoffice.sh
 ./scripts/flatpak/libresprite.sh
-./scripts/others/microsoft-teams.sh
+./scripts/flatpak/microsoft-teams.sh
 ./scripts/flatpak/netbeans.sh
 ./scripts/flatpak/pixelorama.sh
 ./scripts/flatpak/rawtherapee.sh
