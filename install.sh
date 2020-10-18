@@ -80,7 +80,6 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/kdenlive.sh
 ./scripts/flatpak/libresprite.sh
 ./scripts/flatpak/microsoft-teams.sh
-./scripts/flatpak/netbeans.sh
 ./scripts/flatpak/pixelorama.sh
 ./scripts/flatpak/rawtherapee.sh
 ./scripts/flatpak/spotify.sh
