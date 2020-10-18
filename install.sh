@@ -28,6 +28,7 @@ mkdir ~/Android/Sdk
 # => APT 
 
 sudo ./scripts/apt/update.sh
+sudo ./scripts/apt/audacity.sh
 sudo ./scripts/apt/curl.sh
 sudo ./scripts/apt/dconf.sh
 sudo ./scripts/apt/git.sh
@@ -70,7 +71,6 @@ sudo ./scripts/snap/update.sh
 
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
-./scripts/flatpak/audacity.sh
 ./scripts/flatpak/blender.sh
 ./scripts/flatpak/darktable.sh
 ./scripts/flatpak/discord.sh

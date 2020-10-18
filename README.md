@@ -14,6 +14,7 @@ Formatações podem ser desgastantes, por isso criei este script e detalhei mais
 
 A seguir está a lista de tudo que será instalado em ordem alfabética de acordo com o "tipo" de instalação.
 
+* (APT) Audacity
 * (APT) cURL
 * (APT) dconf
 * (APT) Firefox
@@ -46,7 +47,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
 * (SNAP) Sosumi
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
-* (FLATPAK) Audacity
 * (FLATPAK) Blender
 * (FLATPAK) DarkTable
 * (FLATPAK) Discord

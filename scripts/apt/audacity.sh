@@ -14,4 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Audacity"
 echo "${COLOR_RESET}"
 
-flatpak install org.audacityteam.Audacity -y
+sudo apt install audacity -y
