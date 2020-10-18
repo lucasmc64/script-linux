@@ -15,3 +15,4 @@ echo "=> Checando atualizações"
 echo "${COLOR_RESET}"
 
 flatpak update -y
+flatpak remove --unused
