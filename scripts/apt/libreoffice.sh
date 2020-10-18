@@ -14,6 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando LibreOffice"
 echo "${COLOR_RESET}"
 
-sudo apt remove libreoffice-common -y
-sudo apt autoremove
-flatpak install org.libreoffice.LibreOffice -y
+sudo apt install libreoffice -y

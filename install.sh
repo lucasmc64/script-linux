@@ -38,6 +38,7 @@ sudo ./scripts/apt/google-chrome.sh
 sudo ./scripts/apt/insomnia.sh
 sudo ./scripts/apt/krita.sh
 sudo ./scripts/apt/kvm.sh
+sudo ./scripts/apt/libreoffice.sh
 sudo ./scripts/apt/libs-graficas.sh
 sudo ./scripts/apt/lutris.sh
 sudo ./scripts/apt/node.sh
@@ -77,7 +78,6 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/gimp.sh
 ./scripts/flatpak/inkscape.sh
 ./scripts/flatpak/kdenlive.sh
-./scripts/flatpak/libreoffice.sh
 ./scripts/flatpak/libresprite.sh
 ./scripts/flatpak/microsoft-teams.sh
 ./scripts/flatpak/netbeans.sh

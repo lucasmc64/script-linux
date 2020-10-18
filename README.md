@@ -24,6 +24,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Insomnia Core
 * (APT) Krita
 * (APT) KVM
+* (APT) LibreOffice
 * (APT) Libs Gráficas
 * (APT) Lutris
 * (APT) Node.JS
@@ -53,7 +54,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FLATPAK) GIMP
 * (FALTPAK) InkScape
 * (FALTPAK) Kdenlive
-* (FLATPAK) LibreOffice
 * (FLATPAK) LibreSprite
 * (FLATPAK) Microsoft Teams
 * (FLATPAK) NetBeans
