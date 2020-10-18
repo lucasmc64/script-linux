@@ -55,7 +55,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (FALTPAK) InkScape
 * (FALTPAK) Kdenlive
 * (FLATPAK) LibreSprite
-* (FLATPAK) Microsoft Teams
 * (FLATPAK) Pixelorama
 * (FLATPAK) RawTherapee
 * (FLATPAK) Spotify
