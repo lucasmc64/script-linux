@@ -36,6 +36,7 @@ sudo ./scripts/apt/dconf.sh
 sudo ./scripts/apt/discord.sh
 sudo ./scripts/apt/git.sh
 sudo ./scripts/apt/firefox.sh
+sudo ./scripts/apt/gimp.sh
 sudo ./scripts/apt/gnome-boxes.sh
 sudo ./scripts/apt/gnome-tweaks.sh
 sudo ./scripts/apt/google-chrome.sh
@@ -75,7 +76,6 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
 ./scripts/flatpak/foliate.sh
-./scripts/flatpak/gimp.sh
 ./scripts/flatpak/inkscape.sh
 ./scripts/flatpak/kdenlive.sh
 ./scripts/flatpak/libresprite.sh

@@ -14,4 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando GIMP"
 echo "${COLOR_RESET}"
 
-flatpak install org.gimp.GIMP -y
+sudo apt install gimp -y
