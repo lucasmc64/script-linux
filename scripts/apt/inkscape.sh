@@ -14,4 +14,6 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando InkScape"
 echo "${COLOR_RESET}"
 
-flatpak install org.inkscape.Inkscape -y
+sudo add-apt-repository ppa:inkscape.dev/stable
+sudo apt update
+sudo apt install inkscape -y
