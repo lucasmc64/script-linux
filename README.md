@@ -42,6 +42,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Ruby
 * (APT) Sqlite
 * (APT) Steam
+* (APT) Timeshift
 * (APT) Typora
 * (APT) Unrar
 * (APT) Vim

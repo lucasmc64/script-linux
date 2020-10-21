@@ -56,6 +56,7 @@ sudo ./scripts/apt/python.sh
 sudo ./scripts/apt/ruby.sh
 sudo ./scripts/apt/sqlite.sh
 sudo ./scripts/apt/steam.sh
+sudo ./scripts/apt/timeshift.sh
 sudo ./scripts/apt/typora.sh
 sudo ./scripts/apt/unrar.sh
 sudo ./scripts/apt/vim.sh
