@@ -14,4 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Discord"
 echo "${COLOR_RESET}"
 
-flatpak install com.discordapp.Discord -y
+sudo apt install discord -y

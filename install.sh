@@ -33,6 +33,7 @@ sudo ./scripts/apt/blender.sh
 sudo ./scripts/apt/curl.sh
 sudo ./scripts/apt/darktable.sh
 sudo ./scripts/apt/dconf.sh
+sudo ./scripts/apt/discord.sh
 sudo ./scripts/apt/git.sh
 sudo ./scripts/apt/firefox.sh
 sudo ./scripts/apt/gnome-boxes.sh
@@ -73,7 +74,6 @@ sudo ./scripts/snap/update.sh
 
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
-./scripts/flatpak/discord.sh
 ./scripts/flatpak/foliate.sh
 ./scripts/flatpak/gimp.sh
 ./scripts/flatpak/inkscape.sh

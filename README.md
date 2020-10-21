@@ -19,6 +19,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) cURL
 * (APT) DarkTable
 * (APT) dconf
+* (APT) Discord
 * (APT) Firefox
 * (APT) Git
 * (APT) Gnome Boxes
@@ -49,7 +50,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
 * (SNAP) Sosumi
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
-* (FLATPAK) Discord
 * (FLATPAK) Foliate
 * (FLATPAK) GIMP
 * (FALTPAK) InkScape
