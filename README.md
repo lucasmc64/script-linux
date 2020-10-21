@@ -17,6 +17,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Audacity
 * (APT) Blender
 * (APT) cURL
+* (APT) DarkTable
 * (APT) dconf
 * (APT) Firefox
 * (APT) Git
@@ -48,7 +49,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
 * (SNAP) Sosumi
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
-* (FLATPAK) DarkTable
 * (FLATPAK) Discord
 * (FLATPAK) Foliate
 * (FLATPAK) GIMP

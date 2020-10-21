@@ -16,4 +16,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando DarkTable"
 echo "${COLOR_RESET}"
 
-flatpak install org.darktable.Darktable -y
+sudo apt install darktable -y
