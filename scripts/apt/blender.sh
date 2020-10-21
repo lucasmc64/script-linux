@@ -14,4 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Blender"
 echo "${COLOR_RESET}"
 
-flatpak install org.blender.Blender -y
+sudo apt install blender -y
