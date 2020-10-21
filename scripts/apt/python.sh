@@ -14,5 +14,5 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Python 3"
 echo "${COLOR_RESET}"
 
-sudo apt install python3 -y
+sudo apt install python3 -y &&
 python3 --version

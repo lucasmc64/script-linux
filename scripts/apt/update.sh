@@ -14,7 +14,8 @@ echo "${COLOR_RED}"
 echo "=> Atualizando repositórios e pragramas instalados"
 echo "${COLOR_RESET}"
 
-sudo apt update
-sudo apt upgrade -y
-sudo apt dist-upgrade -y
+sudo apt update &&
+sudo apt upgrade -y &&
+sudo apt dist-upgrade -y &&
+sudo apt autoclean &&
 sudo apt autoremove -y

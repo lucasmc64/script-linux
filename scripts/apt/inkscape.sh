@@ -14,6 +14,6 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando InkScape"
 echo "${COLOR_RESET}"
 
-sudo add-apt-repository ppa:inkscape.dev/stable
-sudo apt update
+sudo add-apt-repository ppa:inkscape.dev/stable &&
+sudo apt update &&
 sudo apt install inkscape -y

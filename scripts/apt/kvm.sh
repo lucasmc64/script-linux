@@ -14,7 +14,7 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando KVM"
 echo "${COLOR_RESET}"
 
-sudo apt install cpu-checker -y
-egrep -c '(vmx|svm)' /proc/cpuinfo
-kvm-ok
+sudo apt install cpu-checker -y &&
+egrep -c '(vmx|svm)' /proc/cpuinfo &&
+kvm-ok &&
 sudo apt install qemu-kvm -y
