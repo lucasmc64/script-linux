@@ -28,6 +28,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Google Chrome
 * (APT) InkScape
 * (APT) Insomnia Core
+* (APT) Kdenlive
 * (APT) Krita
 * (APT) KVM
 * (APT) LibreOffice
@@ -53,7 +54,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (SNAP) Sosumi
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
 * (FLATPAK) Foliate
-* (FALTPAK) Kdenlive
 * (FLATPAK) LibreSprite
 * (FLATPAK) Pixelorama
 * (FLATPAK) RawTherapee

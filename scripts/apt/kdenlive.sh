@@ -14,4 +14,6 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Kdenlive"
 echo "${COLOR_RESET}"
 
-flatpak install flathub org.kde.kdenlive -y
+sudo add-apt-repository ppa:kdenlive/kdenlive-stable
+sudo apt-get update
+sudo apt install kdenlive -y
