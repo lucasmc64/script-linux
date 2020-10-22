@@ -54,6 +54,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
 * (SNAP) Sosumi
 * (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
+* (FLATPAK) Anki
 * (FLATPAK) Foliate
 * (FLATPAK) LibreSprite
 * (FLATPAK) Pixelorama

@@ -78,6 +78,7 @@ sudo ./scripts/snap/update.sh
 
 ./scripts/flatpak/update.sh
 ./scripts/flatpak/flathub.sh
+./scripts/flatpak/anki.sh
 ./scripts/flatpak/foliate.sh
 ./scripts/flatpak/libresprite.sh
 ./scripts/flatpak/pixelorama.sh
