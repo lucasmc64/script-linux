@@ -14,4 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Libs Gráficas"
 echo "${COLOR_RESET}"
 
-sudo apt install gcc-multilib lib32z1 lib32stdc++6 -y
+sudo apt install gcc-multilib lib32z1 lib32stdc++6 libssl1.1 ocl-icd-opencl-dev fakeroot xorriso -y
