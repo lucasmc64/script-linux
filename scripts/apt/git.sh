@@ -14,6 +14,5 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Git"
 echo "${COLOR_RESET}"
 
-add-apt-repository ppa:git-core/ppa -y &&
 sudo apt update &&
 sudo apt install git git-man -y
