@@ -16,7 +16,7 @@ echo "${COLOR_RESET}"
 
 sudo apt clean &&
 sudo apt update -m &&
-sudo dpkg ––configure –a &&
+sudo dpkg --configure -a &&
 sudo apt install -f &&
 sudo apt dist-upgrade --fix-missing -y &&
 sudo apt upgrade -y &&
