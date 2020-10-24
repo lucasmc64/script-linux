@@ -14,4 +14,5 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando LibreOffice"
 echo "${COLOR_RESET}"
 
-sudo apt install libreoffice -y
+sudo apt install libreoffice -y &&
+sudo apt install libreoffice-style-breeze libreoffice-style-yaru -y
