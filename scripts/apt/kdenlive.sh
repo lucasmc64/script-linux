@@ -14,6 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Kdenlive"
 echo "${COLOR_RESET}"
 
-sudo add-apt-repository ppa:kdenlive/kdenlive-stable &&
-sudo apt-get update &&
 sudo apt install kdenlive -y
