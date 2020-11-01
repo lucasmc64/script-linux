@@ -15,6 +15,4 @@ echo "=> Instalando Krita"
 echo "${COLOR_RESET}"
 
 sudo apt update &&
-sudo apt install krita -y &&
-sudo apt install krita-l10n -y &&
-
+sudo apt install krita krita-l10n -y
