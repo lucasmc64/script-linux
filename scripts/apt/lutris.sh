@@ -14,5 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando Lutris"
 echo "${COLOR_RESET}"
 
-sudo apt update &&
 sudo apt install lutris -y
