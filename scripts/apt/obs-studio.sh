@@ -14,6 +14,4 @@ echo "${COLOR_BLUE}"
 echo "=> Instalando OBS Studio"
 echo "${COLOR_RESET}"
 
-sudo apt install ffmpeg -y &&
-sudo apt update &&
-sudo apt install obs-studio -y
+sudo apt install ffmpeg obs-studio -y
