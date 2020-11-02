@@ -30,6 +30,7 @@ mkdir ~/Android/Sdk
 sudo ./scripts/apt/update.sh
 sudo ./scripts/apt/audacity.sh
 sudo ./scripts/apt/blender.sh
+sudo ./scripts/apt/breeze-cursor.sh
 sudo ./scripts/apt/curl.sh
 sudo ./scripts/apt/darktable.sh
 sudo ./scripts/apt/dconf.sh
@@ -41,7 +42,7 @@ sudo ./scripts/apt/gnome-boxes.sh
 sudo ./scripts/apt/gnome-tweaks.sh
 sudo ./scripts/apt/google-chrome.sh
 sudo ./scripts/apt/inkscape.sh
-sudo ./scripts/apt/insomnia.sh
+sudo ./scripts/apt/insomnia.sh # Não instalado
 sudo ./scripts/apt/kdenlive.sh
 sudo ./scripts/apt/krita.sh
 sudo ./scripts/apt/kvm.sh
@@ -80,7 +81,7 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/flathub.sh
 ./scripts/flatpak/anki.sh
 ./scripts/flatpak/foliate.sh
-./scripts/flatpak/libresprite.sh
+./scripts/flatpak/libresprite.sh # Não instalado
 ./scripts/flatpak/pixelorama.sh
 ./scripts/flatpak/rawtherapee.sh
 ./scripts/flatpak/spotify.sh

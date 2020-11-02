@@ -16,6 +16,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 
 * (APT) Audacity
 * (APT) Blender
+* (APT) Breeze Cursor
 * (APT) cURL
 * (APT) DarkTable
 * (APT) dconf
