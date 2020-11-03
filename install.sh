@@ -97,7 +97,6 @@ sudo ./scripts/others/itch.sh
 sudo ./scripts/others/jdk8.sh
 sudo ./scripts/others/postbird.sh
 sudo ./scripts/others/rclone.sh
-sudo ./scripts/others/react.sh
 sudo ./scripts/others/yarn.sh
 
 # => Settings 

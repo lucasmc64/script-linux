@@ -69,7 +69,6 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (OTHER) JDK 8
 * (OTHER) Postbird
 * (OTHER) RClone
-* (OTHER) React
 * (OTHER) Yarn
 
 ### Configurações &#9881;
