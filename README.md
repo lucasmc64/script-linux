@@ -6,7 +6,7 @@
 
 Formatações podem ser desgastantes, por isso criei este script e detalhei mais abaixo as configurações que faço.
 
-> Esse script foi feito e testado no *Pop!_OS 20.04*.
+> Esse script foi feito e testado no *Pop!_OS 20.10*.
 
 ## O que o script faz exatamente? &#129323;
 
@@ -17,9 +17,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Audacity
 * (APT) Blender
 * (APT) Breeze Cursor
-* (APT) cURL
 * (APT) DarkTable
-* (APT) dconf - Dependência do tema Dracula para Gnome Terminal
 * (APT) Discord
 * (APT) Firefox
 * (APT) Git
@@ -73,7 +71,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 
 ### Configurações &#9881;
 
-Além de adicionar todos os repositórios oficiais necessários, o script também configura as variáveis de ambiente do JDK 8 e do Android Studio.
+Além de adicionar mínimo possível de PPAs (para o SO não quebrar nos updates), o script também configura as variáveis de ambiente do JDK 8 e do Android Studio.
 
 Além disso ele habilita os emojis do Yarn, faz as principais configurações do Git e instala o tema Dracula no Typora.
 
@@ -83,7 +81,7 @@ Além disso ele habilita os emojis do Yarn, faz as principais configurações do
 
 ### Atenção &#9760;
 
-Esteja ciente de que esse script está com minhas configurações pessoais e pode ser que o script quebre caso algum app tenha que não é existe nos gerenciadores de pacotes tenha atualizado.
+Esteja ciente de que esse script está com minhas configurações pessoais e pode ser que o script quebre caso algum app tenha que não existe nos respositórios padrões tenha atualizado.
 
 É interesssante você dar uma olhada no script antes de executá-lo. Há alguns pontos importantes em que você precisa estar atento:
 
@@ -103,19 +101,11 @@ Esteja ciente de que esse script está com minhas configurações pessoais e pod
 
 ## Minhas configurações manuais e downloads extras &#128406;
 
-### Davinci Resolve &#127916;
-
-Por ser necessário login é necessário baixar manualmente. Acesse [Davinci Resolve](https://www.blackmagicdesign.com/br/products/davinciresolve).
-
-### Itch &#128377;
-
-É necessário deletar manualmente seu instalador.
-
 ### Terminal &#129499;
 
 Como isso envolve uma troca de Shells e reinicialização do computador, não há como fazer via script, mas segue a sequência de comandos para a configuração do terminal.
 
-> Obs.: O ZSH já foi instalado, agora precisamos trocar o Bash por ele.
+> Certifique-se de que o ZSH está instalado. Para isso apenas execute no terminal `zsh --version`, se não der erro, prossiga. Agora precisamos trocar o Bash pelo ZSH.
 
 #### ZSH
 
@@ -272,47 +262,9 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 2. Autorizar ela a usar o GitHub.
 3. Baixar as configurações (SHIFT + ALT + D).
 
-### Telegram &#128172;
-
-1. Abra o menu e clique em *Settings*.
-2. Escolha *Chat Settings* e, em *Chat background*, clique em *Choose from file*.
-3. Na janela que se abre procure pelo arquivo *colors.tdesktop-theme* na pasta *telegram* que foi baixada dentro da pasta do script (*script-linux*).
-4. Escolha uma imagem de fundo para combinar com o tema.
-5. Caso queira, pode deletar a pasta do tema.
-
-### Typora &#128196;
-
-1. Clicar no menu *Temas* e escolher *Dracula*.
-
 ### Sosumi &#129405;
 
 1. Digitar `sosumi` e esperar que o download se conclua.
-
-### Spotify &#127911;
-
-1. Colocar as playlists para baixar.
-
-### Configurações do Gnome &#128736;
-
-1. Na aba *Aparência* importe e defina o papel de parede.
-2. Na aba *Privacidade* selecione *Histórico de arquivos e lixeira* e desmarque a opção **Histórico de arquivos**.
-3. Na aba *Energia* altere o tempo para que a tela se apague para **15min**.
-4. Na aba *Telas* selecione **Luz noturna** e habilite-a.
-5. Na aba *Mouse e Touchpad* desligue a **Rolagem Natural**.
-6. Na aba *Usuários* altere a **foto de perfil**.
-
-### Gnome Tweaks &#128295;
-
-1. Abrir Gnome Tweaks.
-2. Na aba *Aparência* altere e instale temas como quiser.
-3. Na aba *Barra superior* habilite **Porcentagem da bateria**, **Dia da semana**, **Números das semanas**.
-4. Na aba *Janelas* habilite **Centralizar novas janelas**.
-5. Na aba *Teclado e mouse* defina o *Perfil de aceleração* do mouse como **Flat**.
-
-### Free Download Manager &#128722;
-
-1. Clicar no menu hamburguer e escolher *Preferências*.
-2. Mude então para o tema escuro.
 
 ### Android Studio &#9879;
 
