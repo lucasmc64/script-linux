@@ -14,60 +14,44 @@ Formatações podem ser desgastantes, por isso criei este script e detalhei mais
 
 A seguir está a lista de tudo que será instalado em ordem alfabética de acordo com o "tipo" de instalação.
 
-* (APT) Audacity
-* (APT) Blender
-* (APT) Breeze Cursor
-* (APT) DarkTable
-* (APT) Discord
-* (APT) Firefox
-* (APT) Git
-* (APT) GIMP
-* (APT) Gnome Boxes
-* (APT) Gnome Tweaks
-* (APT) Google Chrome
-* (APT) InkScape
-* (APT) Insomnia Core
-* (APT) Kdenlive
-* (APT) Krita
-* (APT) KVM
-* (APT) LibreOffice
-* (APT) Libs Gráficas
-* (APT) Lutris
-* (APT) Node.JS
-* (APT) OBS Studio
-* (APT) Opera
-* (APT) PostgreSQL
-* (APT) Python 3
-* (APT) Ruby
-* (APT) Sqlite
-* (APT) Steam
-* (APT) Timeshift
-* (APT) Typora
-* (APT) Unrar
-* (APT) Vim
-* (APT) Visual Studio Code
-* (APT) Vivaldi
-* (APT) VLC
-* (APT) ZSH
-* (APT) Suporte a Flatpak (EXTRA: caso a distro não tenha)
-* (APT) Suporte a Snaps (EXTRA: caso a distro não tenha)
-* (SNAP) Sosumi
-* (FLATPAK) Suporte ao FlatHub (caso a distro não tenha)
-* (FLATPAK) Anki
-* (FLATPAK) Foliate
-* (FLATPAK) LibreSprite
-* (FLATPAK) Pixelorama
-* (FLATPAK) RawTherapee
-* (FLATPAK) Spotify
-* (FLATPAK) Telegram
-* (OTHER) Android Studio
-* (OTHER) Expo
-* (OTHER) Free Download Manager
-* (OTHER) Itch
-* (OTHER) JDK 8
-* (OTHER) Postbird
-* (OTHER) RClone
-* (OTHER) Yarn
+| APT                | SNAP   | FLATPAK            | OUTRO                 |
+| ------------------ | ------ | ------------------ | --------------------- |
+| Audacity           | Sosumi | Suporte ao FlatHub | Android Studio        |
+| Blender            |        | Anki               | Expo                  |
+| Breeze Cursor      |        | Foliate            | Free Download Manager |
+| DarkTable          |        | LibreSprite        | Itch                  |
+| DarkTable          |        | Pixelorama         | JDK 8                 |
+| Discord            |        | RawTherapee        | Postbird              |
+| Git                |        | Spotify            | RClone                |
+| GIMP               |        | Telegram           | Yarn                  |
+| Gnome Boxes        |        |                    |                       |
+| Gnome Tweaks       |        |                    |                       |
+| Google Chrome      |        |                    |                       |
+| InkScape           |        |                    |                       |
+| Insomnia Core      |        |                    |                       |
+| Kdenlive           |        |                    |                       |
+| Krita              |        |                    |                       |
+| KVM                |        |                    |                       |
+| LibreOffice        |        |                    |                       |
+| Libs Gráficas      |        |                    |                       |
+| Lutris             |        |                    |                       |
+| Node.JS            |        |                    |                       |
+| OBS Studio         |        |                    |                       |
+| Opera              |        |                    |                       |
+| PostgreSQL         |        |                    |                       |
+| Python 3           |        |                    |                       |
+| Ruby               |        |                    |                       |
+| Sqlite             |        |                    |                       |
+| Steam              |        |                    |                       |
+| Timeshift          |        |                    |                       |
+| Unrar              |        |                    |                       |
+| Vim                |        |                    |                       |
+| Visual Studio Code |        |                    |                       |
+| Vivaldi            |        |                    |                       |
+| VLC                |        |                    |                       |
+| ZSH                |        |                    |                       |
+| Suporte a Flatpak  |        |                    |                       |
+| Suporte a Snaps    |        |                    |                       |
 
 ### Configurações &#9881;
 
