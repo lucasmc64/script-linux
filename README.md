@@ -19,7 +19,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * (APT) Breeze Cursor
 * (APT) cURL
 * (APT) DarkTable
-* (APT) dconf
+* (APT) dconf - Dependência do tema Dracula para Gnome Terminal
 * (APT) Discord
 * (APT) Firefox
 * (APT) Git
@@ -134,6 +134,8 @@ Como isso envolve uma troca de Shells e reinicialização do computador, não h�
 6. Execute `cd gnome-terminal`.
 7. Execute `./install.sh`.
 
+> Não se esqueça de deletar a pasta depois, ela não será mais necessária.
+
 #### Fira Code
 
 8. Acesse e baixe a versão mais recente do **Fira Code**: `https://github.com/ryanoasis/nerd-fonts/releases/`.
@@ -189,6 +191,8 @@ zinit light buonomo/yarn-completion
 
 #### Comando `ls` colorido
 
+> Certifique-se de ter o Ruby instalado.
+
 23. Execute `sudo gem install colorls`.
 24. Abra o arquivo *.zshrc* e adicione a linha `source $(dirname $(gem which colorls))/tab_complete.sh` no final do arquivo.
 25. Abra o gerenciador de arquivos entre no diretório *~/.config* e crie uma pasta chamada **colorls**.
@@ -196,10 +200,52 @@ zinit light buonomo/yarn-completion
 27. Abra o arquivo *~/.config/colorls/dark_colors.yaml* e adicione/substitua as seguintes linhas:
 
 ```shell
+# Dracula themed dark color settings for colorls
+#
 # Main Colors
-unrecognized_file: palegreen
-recognized_file:   turquoise
-dir:               dodgerblue
+unrecognized_file: '#ffb86c' # Orange
+recognized_file:   '#f8f8f2' # Foreground
+dir:               '#bd93f9' # Purple
+
+# Link
+dead_link: '#ff5555'         # Red
+link:      '#8be9fd'         # Cyan
+
+# Special Files
+socket:    '#50fa7b'         # Green
+blockdev:  '#50fa7b'         # Green
+chardev:   '#50fa7b'         # Green
+
+# Access Modes
+write:     '#ff79c6'         # Pink
+read:      '#bd93f9'         # Purple
+exec:      '#8be9fd'         # Cyan
+no_access: '#ff5555'         # Red
+
+# Age
+hour_old:    '#6272a4'       # Comment
+day_old:     '#44475a'       # Current Line
+no_modifier: '#f8f8f2'       # Foreground
+
+# File Size
+file_large:  '#ff5555'       # Red
+file_medium: '#ffb86c'       # Orange
+file_small:  '#50fa7b'       # Green
+
+# Random
+report: '#50fa7b'            # Green
+user:   '#8be9fd'            # Cyan
+tree:   '#44475a'            # Current Line
+empty:  '#6272a4'            # Comment
+error:  '#ff5555'            # Red
+normal: '#f8f8f2'            # Foreground
+
+# Git
+addition:     '#8be9fd'      # Cyan
+modification: '#f1fa8c'      # Yellow
+deletion:     '#ff5555'      # Red
+untracked:    '#ffb86c'      # Orange
+unchanged:    '#50fa7b'      # Green
 ```
 
 28. Agora abra o arquivo *~/zshrc* e adicione as seguintes linhas no final do arquivo:
