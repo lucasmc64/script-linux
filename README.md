@@ -123,6 +123,16 @@ Como isso envolve uma troca de Shells e reinicialização do computador, não h�
 14. Execute `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`.
 15. Execute `gedit ~/.zshrc`.
 16. Mude o conteúdo do ZSH_THEME para `spaceship`.
+
+#### Tema Dracula (caso não queira usar o Spaceship)
+
+13. Execute: `git clone https://github.com/dracula/zsh.git "$ZSH_CUSTOM/themes/dracula-prompt" `.
+14. Execute `ln -s "$ZSH_CUSTOM/themes/dracula-prompt/dracula.zsh-theme" "$ZSH_CUSTOM/themes/dracula.zsh-theme"`.
+15. Execute `gedit ~/.zshrc`.
+16. Mude o conteúdo do ZSH_THEME para `dracula`.
+
+#### Exibição do usuário (Spaceship)
+
 17. Feche o terminal e abra-o novamente.
 18. No fim do arquivo adicione:
 
