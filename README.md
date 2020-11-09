@@ -19,11 +19,11 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 | Audacity           | Sosumi | Suporte ao FlatHub | Android Studio        |
 | Blender            |        | Anki               | Expo                  |
 | Breeze Cursor      |        | Foliate            | Free Download Manager |
-| DarkTable          |        | LibreSprite        | Itch                  |
-| DarkTable          |        | Pixelorama         | JDK 8                 |
-| Discord            |        | RawTherapee        | Postbird              |
-| Git                |        | Spotify            | RClone                |
-| GIMP               |        | Telegram           | Yarn                  |
+| DarkTable          |        | Pixelorama         | Itch                  |
+| DarkTable          |        | RawTherapee        | JDK 8                 |
+| Discord            |        | Telegram           | Postbird              |
+| Git                |        |                    | RClone                |
+| GIMP               |        |                    | Yarn                  |
 | Gnome Boxes        |        |                    |                       |
 | Gnome Tweaks       |        |                    |                       |
 | Google Chrome      |        |                    |                       |

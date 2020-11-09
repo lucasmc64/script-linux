@@ -25,6 +25,9 @@ echo "${COLOR_RESET}"
 mkdir ~/Android
 mkdir ~/Android/Sdk
 
+# dconf - Dependência para a instalação do tema Dracula para Gnome Terminal
+# cURL - Dependência para a instalação do Android Studio
+
 # => APT 
 
 sudo ./scripts/apt/update.sh
@@ -36,7 +39,6 @@ sudo ./scripts/apt/darktable.sh
 sudo ./scripts/apt/dconf.sh
 sudo ./scripts/apt/discord.sh
 sudo ./scripts/apt/git.sh
-sudo ./scripts/apt/firefox.sh
 sudo ./scripts/apt/gimp.sh
 sudo ./scripts/apt/gnome-boxes.sh
 sudo ./scripts/apt/gnome-tweaks.sh
@@ -81,10 +83,8 @@ sudo ./scripts/snap/update.sh
 ./scripts/flatpak/flathub.sh
 ./scripts/flatpak/anki.sh
 ./scripts/flatpak/foliate.sh
-./scripts/flatpak/libresprite.sh # Não instalado
 ./scripts/flatpak/pixelorama.sh
 ./scripts/flatpak/rawtherapee.sh
-./scripts/flatpak/spotify.sh
 ./scripts/flatpak/telegram.sh
 ./scripts/flatpak/update.sh
 
