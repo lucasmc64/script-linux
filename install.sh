@@ -474,6 +474,8 @@ yarn_settings () {
     yarn config set -- --emoji true
 }
 
+yarn_settings
+
 # => Finalizando instalações 
 
 echo "${COLOR_GREEN}"
