@@ -113,10 +113,6 @@ sudo ./scripts/settings/android-studio.sh
 
 ./scripts/settings/kvm.sh
 
-# => Telegram
-
-./scripts/settings/telegram.sh
-
 # => Typora
 
 ./scripts/settings/typora.sh
