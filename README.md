@@ -18,17 +18,15 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 | ------------------ | ------ | ------------------ | --------------------- |
 | Audacity           | Sosumi | Suporte ao FlatHub | Android Studio        |
 | Blender            |        | Anki               | Expo                  |
-| Breeze Cursor      |        | Foliate            | Free Download Manager |
-| DarkTable          |        | Pixelorama         | Itch                  |
-| DarkTable          |        | RawTherapee        | JDK 8                 |
-| Discord            |        | Telegram           | Postbird              |
-| Git                |        |                    | RClone                |
-| GIMP               |        |                    | Yarn                  |
-| Gnome Boxes        |        |                    |                       |
-| Gnome Tweaks       |        |                    |                       |
+| Breeze Cursor      |        | Pixelorama         | Free Download Manager |
+| DarkTable          |        | Telegram           | Itch                  |
+| GIMP               |        |                    | JDK 8                 |
+| Git                |        |                    | Postbird              |
+| Gnome Boxes        |        |                    | RClone                |
+| Gnome Tweaks       |        |                    | Yarn                  |
 | Google Chrome      |        |                    |                       |
 | InkScape           |        |                    |                       |
-| Insomnia Core      |        |                    |                       |
+| Insomnia           |        |                    |                       |
 | Kdenlive           |        |                    |                       |
 | Krita              |        |                    |                       |
 | KVM                |        |                    |                       |
@@ -38,8 +36,10 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 | Node.JS            |        |                    |                       |
 | OBS Studio         |        |                    |                       |
 | Opera              |        |                    |                       |
+| Pastas do Papirus  |        |                    |                       |
+| Ícones do Papirus  |        |                    |                       |
 | PostgreSQL         |        |                    |                       |
-| Python 3           |        |                    |                       |
+| RawTherapee        |        |                    |                       |
 | Ruby               |        |                    |                       |
 | Sqlite             |        |                    |                       |
 | Steam              |        |                    |                       |
@@ -69,11 +69,10 @@ Esteja ciente de que esse script está com minhas configurações pessoais e pod
 
 É interesssante você dar uma olhada no script antes de executá-lo. Há alguns pontos importantes em que você precisa estar atento:
 
-* Acesse o arquivo `./scripts/settings/android-studio.sh` e em `CURRENT_USER` altere para o nome do seu usuário.
-* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório acesse o arquivo `./scripts/settings/android-studio.sh`.
+* É de vital impotância que os SDKs do Android Studio sejam baixados no diretório `~/Android/Sdk` já criado durante a instalação. Caso você deseje alterar esse diretório altere o script.
 * O script não baixa a versão mais recente do JDK8, mas sim a versão 1.8.0-261. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
 * Como o script não baixa a versão mais recente do JDK 8, é necessário alterar as versões no script conforme a versão nesse servidor extraoficial é atualizada. Caso o script dê erro por não encontrar o JDK 8 no servidor, abra o arquivo *./others/jdk8.sh*, procure pelo número da versão e compare com o que está hospedado no [servidor](http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8). Caso não sejam as mesmas versões basta substituir o número da versão mais nova no script, ele funcionará normalmente.
-* Acesse o arquivo `./scripts/settings/git.sh` e altere as configurações de conta do git para as suas configurações pessoais.
+* Altere as configurações de conta do git para as suas configurações pessoais.
 * O tema Dracula para o Typora só é instalado caso você já tenha aberto o app pela promeira vez para ele criar as pastas de configurações. Tente abri-lo assim que instalado para tudo correr bem.
 
 ### Mão na massa &#129302;
@@ -239,7 +238,7 @@ alias l='colorls --group-directories-first --almost-all'
 alias ll='colorls --group-directories-first --almost-all --long'
 ```
 
-### Insomnia Core &#128299;
+### Insomnia &#128299;
 
 1. Abra o Insomnia Core.
 2. Clique no menu *Aplication* e escolha *Preferences*.
@@ -247,14 +246,6 @@ alias ll='colorls --group-directories-first --almost-all --long'
 4. Clique na aba *Plugins*.
 5. Digite `insomnia-plugin-dracula-theme` no campo e clique em *Install plugin*.
 6. Agora, na aba *Themes*, clique em *Dracula*.
-
-### Visual Studio Code &#127913;
-
-Recomendo a extensão Settings Sync para salvar as configurações.
-
-1. Instalar a extensão *Settings Sync*.
-2. Autorizar ela a usar o GitHub.
-3. Baixar as configurações (SHIFT + ALT + D).
 
 ### Sosumi &#129405;
 
@@ -281,3 +272,4 @@ Recomendo a extensão Settings Sync para salvar as configurações.
 3. Execute `createuser -EPd lucasmc64` (lucasmc64 é o nome de usuário que escolhi) e dê a senha que desejar
 4. Feche o terminal e abra novamente
 5. Execute `psql -U lucasmc64 -h127.0.0.1 postgres`
+S

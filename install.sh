@@ -10,8 +10,6 @@ COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
 COLOR_RESET=`tput sgr0`
 
-DIRECTORY_DOWNLOADS="$HOME/Downloads/Programs"
-
 # => Configurando o ambiente para as instalações
 
 echo "${COLOR_BLUE}"
@@ -19,11 +17,17 @@ echo "=> Configurando o ambiente para as instalações"
 echo "${COLOR_RESET}"
 
 echo "${COLOR_BLUE}"
-echo "==> Criando pastas para o SDK do Android"
+echo "==> Criando pastas necessárias"
 echo "${COLOR_RESET}"
 
 mkdir ~/Android
 mkdir ~/Android/Sdk
+mkdir ~/.themes
+mkdir ~/.icons
+mkdir ~/.fonts
+mkdir ~/GoogleDrive
+mkdir ~/Repositories
+mkdir ~/.config/colorls
 
 echo "${COLOR_BLUE}"
 echo "==> Instalando pacotes básicos necessários para prosseguir"
@@ -59,6 +63,12 @@ echo "${COLOR_RESET}"
 
 wget -O - http://deb.opera.com/archive.key | sudo apt-key add - &&
 sudo sh -c 'echo "deb http://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera-stable.list'
+
+echo "${COLOR_BLUE}"
+echo "==> Adicionando PPA do Papirus"
+echo "${COLOR_RESET}"
+
+sudo add-apt-repository ppa:papirus/papirus -y
 
 echo "${COLOR_BLUE}"
 echo "==> Adicionando PPA do Typora"
@@ -104,14 +114,13 @@ echo "${COLOR_BLUE}"
 echo "=> APT - Instalações"
 echo "${COLOR_RESET}"
 
-PROGRAMS_APT = (
+PROGRAMS_APT=(
     audacity
     blender
     breeze-cursor-theme # Tema para o cursor
     cpu-checker # Dependência do KVM
     darktable
     dconf-cli # Dependência para a instalação do tema Dracula para Gnome Terminal
-    discord
     fakeroot # Lib gráfica
     ffmpeg # Dependencia do OBS Studio e Free Download Manager
     flatpak
@@ -129,7 +138,7 @@ PROGRAMS_APT = (
     krita-l10n # Dependência do Krita
     lib32z1 # Lib gráfica
     lib32stdc++6 # Lib gráfica
-    libreoffice
+    libreoffice-style-papirus
     libreoffice-style-yaru  # Icones do Yaru para o LibreOffice
     libssl1.1 # Lib gráfica
     lutris
@@ -137,9 +146,11 @@ PROGRAMS_APT = (
     obs-studio
     ocl-icd-opencl-dev # Lib gráfica
     opera-stable
+    papirus-folders
+    papirus-icon-theme
     postgresql
-    python3
     qemu-kvm
+    rawtherapee
     ruby-full
     snapd
     sqlite
@@ -159,86 +170,45 @@ PROGRAMS_APT = (
     zsh-doc
 )
 
-update
+sudo apt update
 
 for program in ${PROGRAMS_APT[@]}; do
-    if ! dpkg -l | grep -q $program; then # Só instala se já não estiver instalado
-        echo "${COLOR_BLUE}"
-        echo "==> APT - Instalando ${program}"
-        echo "${COLOR_RESET}"
-        sudo apt install "$program" -y
-    else
-        echo "[INSTALADO] - $program"
-    fi
+    echo "${COLOR_BLUE}"
+    echo "==> APT - Instalando ${program}"
+    echo "${COLOR_RESET}"
+    sudo apt install "$program" -y
 done
-
-update
-
-# => APT - Pós-instalações
-
-echo "${COLOR_BLUE}"
-
-echo "==> KVM"
-egrep -c '(vmx|svm)' /proc/cpuinfo
-kvm-ok
-
-echo "==> Node"
-node -v
-
-echo "==> Npm"
-npm -v
-
-echo "==> Python"
-python3 --version
-
-echo "==> Ruby"
-ruby --version
-
-echo "${COLOR_RESET}"
 
 # => SNAP - Instalações
 
-PROGRAMS_SNAP = (
+PROGRAMS_SNAP=(
     sosumi
 )
 
-update
-
 for program in ${PROGRAMS_SNAP[@]}; do
-    if ! snap list | grep -q $program; then # Só instala se já não estiver instalado
-        echo "${COLOR_BLUE}"
-        echo "==> SNAP - Instalando ${program}"
-        echo "${COLOR_RESET}"
-        sudo snap install "$program"
-    else
-        echo "[INSTALADO] - $program"
-    fi
+    echo "${COLOR_BLUE}"
+    echo "==> SNAP - Instalando ${program}"
+    echo "${COLOR_RESET}"
+    sudo snap install "$program"
 done
-
-update
 
 # => Flatpak - Instalações
 
-PROGRAMS_FLATPAK = (
+PROGRAMS_FLATPAK=(
     flathub
-    com.github.johnfactotum.Foliate
+    net.ankiweb.Anki
     com.orama_interactive.Pixelorama
-    com.rawtherapee.RawTherapee
     org.telegram.desktop
 )
 
-update
-
-for program in ${PROGRAMS_SNAP[@]}; do
-    if ! flatpak list | grep -q $program; then # Só instala se já não estiver instalado
-        echo "${COLOR_BLUE}"
-        echo "==> FLATPAK - Instalando ${program}"
-        echo "${COLOR_RESET}"
-        flatpak install "$program" -y
-    else
-        echo "[INSTALADO] - $program"
-    fi
+for program in ${PROGRAMS_FLATPAK[@]}; do
+    echo "${COLOR_BLUE}"
+    echo "==> FLATPAK - Instalando ${program}"
+    echo "${COLOR_RESET}"
+    flatpak install "$program" -y
 done
+
+# Atualizando tudo
 
 update
 
@@ -253,19 +223,20 @@ android_studio () {
 
     url=$(curl -s https://developer.android.com/studio | grep -E "redirector.*linux.tar.gz" | grep -v "Linux" | sed "s/.*href=\"//g;s/\".*//g")
     wget -O android-studio.tar.gz $url
-    sudo tar -xvzf ./android-studio.tar.gz
-    sudo mv ./android-studio /usr/share
-    sudo rm -rf ./android-studio.tar.gz
+    tar -xvzf ./android-studio.tar.gz
+    mv ./android-studio $HOME/AndroidStudio
+    rm -rf ./android-studio.tar.gz
     sudo cp /etc/environment /etc/environment.bkp
     PATH_VARIABLE=`grep "PATH=\"*\"" /etc/environment`
     OLD_PATH_CONTENT=`echo ${PATH_VARIABLE:6:${#PATH_VARIABLE}-7}`
-    ADD_TO_PATH=`echo ":/usr/share/android-studio/bin"`
+    ADD_TO_PATH=`echo ":${HOME}/AndroidStudio/bin"`
     NEW_PATH_CONTENT=`echo ${OLD_PATH_CONTENT}${ADD_TO_PATH}`
     OTHERS_VARIABLES=`grep -v "PATH=\"*\"" /etc/environment`
-    sudo printf "PATH=\"${NEW_PATH_CONTENT}\"\n${OTHERS_VARIABLES}" > /etc/environment
+    sudo rm -f /etc/environment
+    echo -e "PATH=\"${NEW_PATH_CONTENT}\"\n${OTHERS_VARIABLES}" | sudo tee -a /etc/environment
 }
 
-sudo android_studio
+android_studio
 
 # ==> Expo
 
@@ -277,7 +248,7 @@ expo () {
     sudo npm install --global expo-cli
 }
 
-sudo expo
+expo
 
 # ==> Free Download Manager
 
@@ -292,7 +263,7 @@ free_download_manager () {
     sudo apt --fix-broken install -y
 }
 
-sudo free_download_manager
+free_download_manager
 
 # ==> Itch
 
@@ -305,7 +276,7 @@ itch () {
     chmod +x itch-setup && ./itch-setup
 }
 
-sudo itch
+itch
 
 # ==> JDK 8
 
@@ -316,8 +287,8 @@ jdk8 () {
 
     wget -O jdk-8u261-linux-x64.tar.gz http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u261-linux-x64.tar.gz
     sudo mkdir /usr/lib/jvm
-    sudo tar -xvzf ./jdk-8u261-linux-x64.tar.gz
-    mv ./jdk1.8.0_261 /usr/lib/jvm
+    tar -xvzf ./jdk-8u261-linux-x64.tar.gz
+    sudo mv ./jdk1.8.0_261 /usr/lib/jvm
     sudo cp /etc/environment /etc/environment.bkp
     PATH_VARIABLE=`grep "PATH=\"*\"" /etc/environment`
     OLD_PATH_CONTENT=`echo ${PATH_VARIABLE:6:${#PATH_VARIABLE}-7}`
@@ -325,7 +296,8 @@ jdk8 () {
     NEW_PATH_CONTENT=`echo ${OLD_PATH_CONTENT}${ADD_TO_PATH}`
     OTHERS_VARIABLES=`grep -v "PATH=\"*\"" /etc/environment`
     JAVA_VARIABLES=`printf "J2SDKDIR=\"/usr/lib/jvm/jdk1.8.0_261\"\nJ2REDIR=\"/usr/lib/jvm/jdk1.8.0_261/jre\"\nJAVA_HOME=\"/usr/lib/jvm/jdk1.8.0_261\"\nDERBY_HOME=\"/usr/lib/jvm/jdk1.8.0_261/db\"\n"`
-    sudo printf "PATH=\"${NEW_PATH_CONTENT}\"\n\n${OTHERS_VARIABLES}\n\n${JAVA_VARIABLES}" > /etc/environment
+    sudo rm -f /etc/environment
+    echo -e "PATH=\"${NEW_PATH_CONTENT}\"\n${OTHERS_VARIABLES}\n${JAVA_VARIABLES}" | sudo tee -a /etc/environment
     sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_261/bin/java" 0
     sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_261/bin/javac" 0
     sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_261/bin/java
@@ -340,7 +312,7 @@ jdk8 () {
     echo "${COLOR_RESET}"
 }
 
-sudo jdk8
+jdk8
 
 # ==> Postbird
 
@@ -356,7 +328,7 @@ postbird () {
     sudo rm -rf ./postbird.deb
 }
 
-sudo postbird
+postbird
 
 # ==> RClone
 
@@ -367,10 +339,10 @@ rclone () {
 
     wget -O rclone-script.sh https://rclone.org/install.sh
     chmod a+x ./rclone-script.sh
-    ./rclone-script.sh
+    sudo ./rclone-script.sh
 }
 
-sudo rclone
+rclone
 
 # ==> Yarn
 
@@ -381,18 +353,8 @@ yarn () {
 
     sudo npm install -g yarn
 }
-
-sudo yarn
-
-# => Outros - Pós-instalações
-
-echo "${COLOR_BLUE}"
-
-echo "==> Yarn"
-
-yarn -v
-
-echo "${COLOR_RESET}"
+ 
+yarn
 
 # => Settings 
 
@@ -403,17 +365,18 @@ android_studio_settings () {
     echo "=> Adicionando variáveis de Ambiente do Android Studio"
     echo "${COLOR_RESET}"
 
-    CURRENT_USER="lucasmc64"
+    sudo cp /etc/environment /etc/environment.bkp
     PATH_VARIABLE=`grep "PATH=\"*\"" /etc/environment`
     OLD_PATH_CONTENT=`echo ${PATH_VARIABLE:6:${#PATH_VARIABLE}-7}`
-    ADD_TO_PATH=`echo ":/home/${CURRENT_USER}/Android/Sdk/emulator:/home/${CURRENT_USER}/Android/Sdk/tools:/home/${CURRENT_USER}/Android/Sdk/tools/bin:/home/${CURRENT_USER}/Android/Sdk/platform-tools"`
+    ADD_TO_PATH=`echo ":/home/$USER/Android/Sdk/emulator:/home/$USER/Android/Sdk/tools:/home/$USER/Android/Sdk/tools/bin:/home/$USER/Android/Sdk/platform-tools"`
     NEW_PATH_CONTENT=`echo ${OLD_PATH_CONTENT}${ADD_TO_PATH}`
     OTHERS_VARIABLES=`grep -v "PATH=\"*\"" /etc/environment`
-    ANDROID_VARIABLES=`printf "ANDROID_HOME=\"/home/${CURRENT_USER}/Android/Sdk\"\n"`
-    sudo printf "PATH=\"${NEW_PATH_CONTENT}\"\n\n${OTHERS_VARIABLES}\n\n${ANDROID_VARIABLES}" > /etc/environment
+    ANDROID_VARIABLES=`printf "ANDROID_HOME=\"/home/$USER/Android/Sdk\"\n"`
+    sudo rm -f /etc/environment
+    echo -e "PATH=\"${NEW_PATH_CONTENT}\"\n${OTHERS_VARIABLES}\n${ANDROID_VARIABLES}" | sudo tee -a /etc/environment
 }
 
-sudo android_studio_settings
+android_studio_settings
 
 # ==> Git
 
@@ -440,7 +403,19 @@ kvm_settings () {
     sudo adduser $USER kvm
 }
 
-sudo kvm_settings
+kvm_settings
+
+# ==> Papirus
+
+papirus_settings () {
+    echo "${COLOR_BLUE}"
+    echo "=> Configurando Papirus"
+    echo "${COLOR_RESET}"
+
+    papirus-folders -C violet --theme Papirus-Dark
+}
+
+papirus_settings
 
 # ==> Typora
 
