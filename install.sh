@@ -451,6 +451,26 @@ yarn_settings () {
 
 yarn_settings
 
+
+# => Baixando e instalando fontes
+
+echo "${COLOR_GREEN}"
+echo "=> Baixando e instalando fontes"
+echo "${COLOR_RESET}"
+
+# Montserrat
+wget -O Montserrat.zip https://fonts.google.com/download?family=Montserrat
+unzip Montserrat.zip -d ./Montserrat
+mv ./Montserrat ~/.fonts
+rm ./Montserrat.zip
+
+# Roboto
+wget -O Roboto.zip https://fonts.google.com/download?family=Roboto
+unzip Roboto.zip -d ./Roboto
+mv ./Roboto ~/.fonts
+rm ./Roboto.zip
+
+
 # => Finalizando instalações 
 
 echo "${COLOR_GREEN}"
