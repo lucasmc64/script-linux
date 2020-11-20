@@ -116,6 +116,7 @@ echo "${COLOR_RESET}"
 
 PROGRAMS_APT=(
     audacity
+    android-sdk-platform-tools-common # Dependência do Android Studio
     blender
     breeze-cursor-theme # Tema para o cursor
     cpu-checker # Dependência do KVM
@@ -374,6 +375,7 @@ android_studio_settings () {
     ANDROID_VARIABLES=`printf "ANDROID_HOME=\"/home/$USER/Android/Sdk\"\n"`
     sudo rm -f /etc/environment
     echo -e "PATH=\"${NEW_PATH_CONTENT}\"\n${OTHERS_VARIABLES}\n${ANDROID_VARIABLES}" | sudo tee -a /etc/environment
+    sudo usermod -aG plugdev $LOGNAME # Adiciona meu usuário ao plugdev
 }
 
 android_studio_settings
