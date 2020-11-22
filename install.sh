@@ -119,6 +119,7 @@ PROGRAMS_APT=(
     android-sdk-platform-tools-common # Dependência do Android Studio
     blender
     breeze-cursor-theme # Tema para o cursor
+    com.github.tkashkin.gamehub
     cpu-checker # Dependência do KVM
     darktable
     dconf-cli # Dependência para a instalação do tema Dracula para Gnome Terminal

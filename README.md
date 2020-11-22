@@ -20,10 +20,11 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 | Blender            |        | Anki               | Expo                  |
 | Breeze Cursor      |        | Pixelorama         | Free Download Manager |
 | DarkTable          |        | Telegram           | Itch                  |
-| GIMP               |        |                    | JDK 8                 |
-| Git                |        |                    | Postbird              |
-| Gnome Boxes        |        |                    | RClone                |
-| Gnome Tweaks       |        |                    | Yarn                  |
+| GameHub            |        |                    | JDK 8                 |
+| GIMP               |        |                    | Postbird              |
+| Git                |        |                    | RClone                |
+| Gnome Boxes        |        |                    | Yarn                  |
+| Gnome Tweaks       |        |                    |                       |
 | Google Chrome      |        |                    |                       |
 | InkScape           |        |                    |                       |
 | Insomnia           |        |                    |                       |
