@@ -126,6 +126,7 @@ PROGRAMS_APT=(
     fakeroot # Lib gráfica
     ffmpeg # Dependencia do OBS Studio e Free Download Manager
     flatpak
+    font-manager
     gcc-multilib # Lib gráfica
     gimp
     git
