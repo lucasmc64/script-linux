@@ -444,6 +444,8 @@ typora_settings () {
 
 typora_settings
 
+# ==> Vim
+
 vim_settings () {
     echo "${COLOR_GREEN}"
     echo "=> Instalando tema Dracula no Vim"
