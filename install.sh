@@ -28,6 +28,7 @@ mkdir ~/.fonts
 mkdir ~/GoogleDrive
 mkdir ~/Repositories
 mkdir ~/.config/colorls
+mkdir -p ~/.vim/pack/themes/opt # ou mkdir -p ~/.vim/pack/themes/start para Vim 8.2 acima
 
 echo "${COLOR_BLUE}"
 echo "==> Instalando pacotes básicos necessários para prosseguir"
@@ -442,6 +443,13 @@ typora_settings () {
 }
 
 typora_settings
+
+vim_settings () {
+    git clone https://github.com/dracula/vim.git dracula
+    mv dracula ~/.vim/pack/themes/opt # ou mv ~/.vim/pack/themes/opt para Vim 8.2 acima
+    touch ~/.vimrc
+    echo -e "packadd! dracula\nsyntax enable\ncolorscheme dracula" | tee -a ~/.vimrc
+}
 
 # ==> Yarn
 
