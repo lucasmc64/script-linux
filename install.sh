@@ -383,6 +383,18 @@ android_studio_settings () {
 
 android_studio_settings
 
+# ==> Gdit
+
+gedit_settings () {
+    echo "${COLOR_GREEN}"
+    echo "=> Instalando tema Dracula no Gedit"
+    echo "${COLOR_RESET}"
+
+    wget https://raw.githubusercontent.com/dracula/gedit/master/dracula.xml
+    mkdir -p $HOME/.local/share/gedit/styles/
+    mv dracula.xml $HOME/.local/share/gedit/styles/
+}
+
 # ==> Git
 
 git_settings () {
