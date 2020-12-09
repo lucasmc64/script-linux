@@ -445,6 +445,10 @@ typora_settings () {
 typora_settings
 
 vim_settings () {
+    echo "${COLOR_GREEN}"
+    echo "=> Instalando tema Dracula no Vim"
+    echo "${COLOR_RESET}"
+
     git clone https://github.com/dracula/vim.git dracula
     mv dracula ~/.vim/pack/themes/opt # ou mv ~/.vim/pack/themes/opt para Vim 8.2 acima
     touch ~/.vimrc
