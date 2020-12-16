@@ -186,6 +186,10 @@ done
 # => SNAP - Instalações
 
 PROGRAMS_SNAP=(
+    akira,
+    authpass,
+    authy,
+    gtk-common-themes,
     sosumi
 )
 

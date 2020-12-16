@@ -16,6 +16,7 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 * Blender
 * Breeze Cursor
 * DarkTable
+* Font Manager
 * GameHub
 * GIMP
 * Git
@@ -59,6 +60,9 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 
 #### SNAP
 
+* Akira
+* AuthPass
+* Authy
 * Sosumi
 
 #### OUTRO
