@@ -12,65 +12,65 @@ A seguir está a lista de tudo que será instalado em ordem alfabética de acord
 
 #### APT
 
-Audacity
-Blender
-Breeze Cursor
-DarkTable
-GameHub
-GIMP
-Git
-Gnome Boxes
-Gnome Tweaks
-Google Chrome
-InkScape
-Insomnia
-Kdenlive
-Krita
-KVM
-LibreOffice
-Libs Gráficas
-Lutris
-Node.JS
-OBS Studio
-Opera
-Pastas do Papirus
-Ícones do Papirus
-PostgreSQL
-RawTherapee
-Ruby
-Sqlite
-Steam
-Timeshift
-Unrar
-Vim
-Visual Studio Code
-Vivaldi
-VLC
-ZSH
-Suporte a Flatpak
-Suporte a Snap
+* Audacity
+* Blender
+* Breeze Cursor
+* DarkTable
+* GameHub
+* GIMP
+* Git
+* Gnome Boxes
+* Gnome Tweaks
+* Google Chrome
+* InkScape
+* Insomnia
+* Kdenlive
+* Krita
+* KVM
+* LibreOffice
+* Libs Gráficas
+* Lutris
+* Node.JS
+* OBS Studio
+* Opera
+* Pastas do Papirus
+* Ícones do Papirus
+* PostgreSQL
+* RawTherapee
+* Ruby
+* Sqlite
+* Steam
+* Timeshift
+* Unrar
+* Vim
+* Visual Studio Code
+* Vivaldi
+* VLC
+* ZSH
+* Suporte a Flatpak
+* Suporte a Snap
 
 #### FLATPAK
 
-Suporte ao FlatHub
-Anki
-Pixelorama
-Telegram
+* Suporte ao FlatHub
+* Anki
+* Pixelorama
+* Telegram
 
 #### SNAP
 
-Sosumi
+* Sosumi
 
 #### OUTRO
 
-Android Studio
-Expo
-Free Download Manager
-Itch
-JDK 8
-Postbird
-RClone
-Yarn
+* Android Studio
+* Expo
+* Free Download Manager
+* Itch
+* JDK 8
+* Postbird
+* RClone
+* Yarn
 
 ### Configurações &#9881;
 
