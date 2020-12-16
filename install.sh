@@ -120,7 +120,6 @@ PROGRAMS_APT=(
     android-sdk-platform-tools-common # Dependência do Android Studio
     blender
     breeze-cursor-theme # Tema para o cursor
-    com.github.tkashkin.gamehub
     cpu-checker # Dependência do KVM
     darktable
     dconf-cli # Dependência para a instalação do tema Dracula para Gnome Terminal
@@ -129,6 +128,7 @@ PROGRAMS_APT=(
     flatpak
     font-manager
     gcc-multilib # Lib gráfica
+    com.github.tkashkin.gamehub
     gimp
     git
     git-man # Documentação do git
@@ -395,6 +395,8 @@ gedit_settings () {
     mv dracula.xml $HOME/.local/share/gedit/styles/
 }
 
+gedit_settings
+
 # ==> Git
 
 git_settings () {
@@ -488,22 +490,25 @@ echo "${COLOR_GREEN}"
 echo "=> Baixando e instalando fontes"
 echo "${COLOR_RESET}"
 
-# Montserrat
-wget -O Montserrat.zip https://fonts.google.com/download?family=Montserrat
-unzip Montserrat.zip -d ./Montserrat
-mv ./Montserrat ~/.fonts
-rm ./Montserrat.zip
+FONTS=(
+    Montserrat,
+    Poppins,
+    Roboto
+)
 
-# Roboto
-wget -O Roboto.zip https://fonts.google.com/download?family=Roboto
-unzip Roboto.zip -d ./Roboto
-mv ./Roboto ~/.fonts
-rm ./Roboto.zip
-
+for font in ${FONTS[@]}; do
+    echo "${COLOR_BLUE}"
+    echo "==> Baixando e instalando ${font}"
+    echo "${COLOR_RESET}"
+    
+    wget -O "$font".zip https://fonts.google.com/download?family="$font"
+    unzip "$font".zip -d ./"$font"
+    mv ./"$font" ~/.fonts
+    rm ./"$font".zip
+done
 
 # => Finalizando instalações 
 
 echo "${COLOR_GREEN}"
-echo "=> Finalizando instalações"
-echo "=> Leia o README para terminar"
+echo "=> Fim das instalações e configurações"
 echo "${COLOR_RESET}"

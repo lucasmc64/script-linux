@@ -2,11 +2,7 @@
 
 # Script de instalação &#128220;
 
-## Motivação &#129300;
-
-Formatações podem ser desgastantes, por isso criei este script e detalhei mais abaixo as configurações que faço.
-
-> Esse script foi feito e testado no *Pop!_OS 20.10*.
+> Esse script foi feito e testado no *Pop!_OS 20.04* e não há garantias de que funcione em outras distros ou versões desta.
 
 ## O que o script faz exatamente? &#129323;
 
@@ -14,59 +10,81 @@ Formatações podem ser desgastantes, por isso criei este script e detalhei mais
 
 A seguir está a lista de tudo que será instalado em ordem alfabética de acordo com o "tipo" de instalação.
 
-| APT                | SNAP   | FLATPAK            | OUTRO                 |
-| ------------------ | ------ | ------------------ | --------------------- |
-| Audacity           | Sosumi | Suporte ao FlatHub | Android Studio        |
-| Blender            |        | Anki               | Expo                  |
-| Breeze Cursor      |        | Pixelorama         | Free Download Manager |
-| DarkTable          |        | Telegram           | Itch                  |
-| GameHub            |        |                    | JDK 8                 |
-| GIMP               |        |                    | Postbird              |
-| Git                |        |                    | RClone                |
-| Gnome Boxes        |        |                    | Yarn                  |
-| Gnome Tweaks       |        |                    |                       |
-| Google Chrome      |        |                    |                       |
-| InkScape           |        |                    |                       |
-| Insomnia           |        |                    |                       |
-| Kdenlive           |        |                    |                       |
-| Krita              |        |                    |                       |
-| KVM                |        |                    |                       |
-| LibreOffice        |        |                    |                       |
-| Libs Gráficas      |        |                    |                       |
-| Lutris             |        |                    |                       |
-| Node.JS            |        |                    |                       |
-| OBS Studio         |        |                    |                       |
-| Opera              |        |                    |                       |
-| Pastas do Papirus  |        |                    |                       |
-| Ícones do Papirus  |        |                    |                       |
-| PostgreSQL         |        |                    |                       |
-| RawTherapee        |        |                    |                       |
-| Ruby               |        |                    |                       |
-| Sqlite             |        |                    |                       |
-| Steam              |        |                    |                       |
-| Timeshift          |        |                    |                       |
-| Unrar              |        |                    |                       |
-| Vim                |        |                    |                       |
-| Visual Studio Code |        |                    |                       |
-| Vivaldi            |        |                    |                       |
-| VLC                |        |                    |                       |
-| ZSH                |        |                    |                       |
-| Suporte a Flatpak  |        |                    |                       |
-| Suporte a Snaps    |        |                    |                       |
+#### APT
+
+Audacity
+Blender
+Breeze Cursor
+DarkTable
+GameHub
+GIMP
+Git
+Gnome Boxes
+Gnome Tweaks
+Google Chrome
+InkScape
+Insomnia
+Kdenlive
+Krita
+KVM
+LibreOffice
+Libs Gráficas
+Lutris
+Node.JS
+OBS Studio
+Opera
+Pastas do Papirus
+Ícones do Papirus
+PostgreSQL
+RawTherapee
+Ruby
+Sqlite
+Steam
+Timeshift
+Unrar
+Vim
+Visual Studio Code
+Vivaldi
+VLC
+ZSH
+Suporte a Flatpak
+Suporte a Snap
+
+#### FLATPAK
+
+Suporte ao FlatHub
+Anki
+Pixelorama
+Telegram
+
+#### SNAP
+
+Sosumi
+
+#### OUTRO
+
+Android Studio
+Expo
+Free Download Manager
+Itch
+JDK 8
+Postbird
+RClone
+Yarn
 
 ### Configurações &#9881;
 
 Além de adicionar mínimo possível de PPAs (para o SO não quebrar nos updates), o script também configura as variáveis de ambiente do JDK 8 e do Android Studio.
 
-Além disso ele habilita os emojis do Yarn, faz as principais configurações do Git e instala o tema Dracula no Typora.
+Além disso ele habilita os emojis do Yarn, faz as principais configurações do Git, instala o tema Dracula no Typora e algumas outras coisinhas mais.
 
-> Ainda é necessário abrir o Typora e habilitar o tema.
+> Ainda é necessário abrir o Typora e habilitar o tema Dracula.
 
 ## Executando o script &#128163;
 
 ### Atenção &#9760;
 
-Esteja ciente de que esse script está com minhas configurações pessoais e pode ser que o script quebre caso algum app tenha que não existe nos respositórios padrões tenha atualizado.
+Esteja ciente de que esse script está com minhas configurações pessoais e pode ser que o script quebre caso algum app não existe nos respositórios padrões ou atualizado.
 
 É interesssante você dar uma olhada no script antes de executá-lo. Há alguns pontos importantes em que você precisa estar atento:
 
@@ -74,7 +92,7 @@ Esteja ciente de que esse script está com minhas configurações pessoais e pod
 * O script não baixa a versão mais recente do JDK8, mas sim a versão 1.8.0-261. Caso queira a versão mais recente recomendo fazer manualmente a configuração. Recomendo esse tutorial [aqui](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
 * Como o script não baixa a versão mais recente do JDK 8, é necessário alterar as versões no script conforme a versão nesse servidor extraoficial é atualizada. Caso o script dê erro por não encontrar o JDK 8 no servidor, abra o arquivo *./others/jdk8.sh*, procure pelo número da versão e compare com o que está hospedado no [servidor](http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8). Caso não sejam as mesmas versões basta substituir o número da versão mais nova no script, ele funcionará normalmente.
 * Altere as configurações de conta do git para as suas configurações pessoais.
-* O tema Dracula para o Typora só é instalado caso você já tenha aberto o app pela promeira vez para ele criar as pastas de configurações. Tente abri-lo assim que instalado para tudo correr bem.
+* **O tema Dracula para o Typora só é instalado caso você já tenha aberto o app pela promeira vez** para ele criar as pastas de configurações. Tente abri-lo assim que instalado para tudo correr bem.
 
 ### Mão na massa &#129302;
 
@@ -123,13 +141,6 @@ Como isso envolve uma troca de Shells e reinicialização do computador, não h�
 14. Execute `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`.
 15. Execute `gedit ~/.zshrc`.
 16. Mude o conteúdo do ZSH_THEME para `spaceship`.
-
-#### Tema Dracula (caso não queira usar o Spaceship)
-
-13. Execute: `git clone https://github.com/dracula/zsh.git "$ZSH_CUSTOM/themes/dracula-prompt" `.
-14. Execute `ln -s "$ZSH_CUSTOM/themes/dracula-prompt/dracula.zsh-theme" "$ZSH_CUSTOM/themes/dracula.zsh-theme"`.
-15. Execute `gedit ~/.zshrc`.
-16. Mude o conteúdo do ZSH_THEME para `dracula`.
 
 #### Exibição do usuário (Spaceship)
 
@@ -242,11 +253,9 @@ alias ll='colorls --group-directories-first --almost-all --long'
 ### Insomnia &#128299;
 
 1. Abra o Insomnia Core.
-2. Clique no menu *Aplication* e escolha *Preferences*.
-3. Na janela que se abre, na aba *General*, mude o *Editor Indent Size* para 4.
-4. Clique na aba *Plugins*.
-5. Digite `insomnia-plugin-dracula-theme` no campo e clique em *Install plugin*.
-6. Agora, na aba *Themes*, clique em *Dracula*.
+2. Clique na aba *Plugins*.
+3. Digite `insomnia-plugin-dracula-theme` no campo e clique em *Install plugin*.
+4. Agora, na aba *Themes*, clique em *Dracula*.
 
 ### Sosumi &#129405;
 
@@ -260,11 +269,6 @@ alias ll='colorls --group-directories-first --almost-all --long'
 4. Selecione o emulador, avance.
 5. Abra as intruções sobre o KVM, finalize.
 6. Após finalizarem as instalações obrigatórias clique em *Configure* e, em seguida, *Create Desktop Entry* para o Android Studio aparecer no menu da distro.
-7. Baixe o SDK 28 (usado no React atualmente) e o que mais for necessário.
-
-### RClone
-
-1. Acesse [https://rclone.org/docs/](https://rclone.org/docs/) para configurá-lo.
 
 ### PostgreSQL
 
@@ -273,4 +277,3 @@ alias ll='colorls --group-directories-first --almost-all --long'
 3. Execute `createuser -EPd lucasmc64` (lucasmc64 é o nome de usuário que escolhi) e dê a senha que desejar
 4. Feche o terminal e abra novamente
 5. Execute `psql -U lucasmc64 -h127.0.0.1 postgres`
-S
