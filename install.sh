@@ -4,7 +4,6 @@
 
 # => Variáveis globais
 
-COLOR_RED=`tput setaf 1`
 COLOR_GREEN=`tput setaf 2`
 COLOR_YELLOW=`tput setaf 3`
 COLOR_BLUE=`tput setaf 4`
@@ -12,86 +11,46 @@ COLOR_RESET=`tput sgr0`
 
 # => Configurando o ambiente para as instalações
 
-echo "${COLOR_BLUE}"
-echo "=> Configurando o ambiente para as instalações"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} => Configurando o ambiente para as instalações ${COLOR_RESET}"
 
-echo "${COLOR_BLUE}"
-echo "==> Criando pastas necessárias"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Criando pastas necessárias ${COLOR_RESET}"
 
-mkdir ~/Android
-mkdir ~/Android/Sdk
-mkdir ~/.themes
-mkdir ~/.icons
-mkdir ~/.fonts
-mkdir ~/GoogleDrive
-mkdir ~/Repositories
-mkdir ~/.config/colorls
-mkdir -p ~/.vim/pack/themes/opt # ou mkdir -p ~/.vim/pack/themes/start para Vim 8.2 acima
+mkdir -p ~/Android ~/Android/Sdk ~/Dev ~/GoogleDrive ~/Repositories ~/.themes ~/.icons ~/.fonts ~/.config/colorls ~/.vim/pack/themes/opt # ou ~/.vim/pack/themes/start para Vim 8.2 acima
 
-echo "${COLOR_BLUE}"
-echo "==> Instalando pacotes básicos necessários para prosseguir"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Instalando pacotes básicos necessários para prosseguir ${COLOR_RESET}"
 
 sudo apt install wget curl -y
 
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Google Chrome"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Adicionando PPA do Google Chrome ${COLOR_RESET}"
 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list' &&
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Insomnia Core"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Adicionando PPA do Insomnia Core ${COLOR_RESET}"
 
 echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list &&
 wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
     | sudo apt-key add - 
 
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Node"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Adicionando PPA do Node.JS ${COLOR_RESET}"
 
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash - 
 
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Opera"
-echo "${COLOR_RESET}"
-
-wget -O - http://deb.opera.com/archive.key | sudo apt-key add - &&
-sudo sh -c 'echo "deb http://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list.d/opera-stable.list'
-
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Papirus"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Adicionando PPA do Papirus ${COLOR_RESET}"
 
 sudo add-apt-repository ppa:papirus/papirus -y
 
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Typora"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Adicionando PPA do Typora ${COLOR_RESET}"
 
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add - &&
 sudo add-apt-repository 'deb https://typora.io/linux ./' -y
 
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Visual Studio Code"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} ==> Adicionando PPA do Visual Studio Code ${COLOR_RESET}"
 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg &&
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ &&
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-
-echo "${COLOR_BLUE}"
-echo "==> Adicionando PPA do Vivaldi"
-echo "${COLOR_RESET}"
-
-wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add - &&
-sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main' -y
 
 # => Função de atualização
 
@@ -99,75 +58,58 @@ update () {
     sudo apt clean
     sudo dpkg --configure -a
     sudo apt install -f
-    sudo apt dist-upgrade --fix-missing -y
     sudo apt update -m &&
     sudo apt upgrade --fix-missing -y
     sudo apt autoclean
     sudo apt autoremove --purge -y
-    sudo snap refresh;
-    sudo npm update -g; 
+    sudo snap refresh
+    sudo npm update -g
     flatpak update -y
+    flatpak remove --unused
 }
 
 # => APT - Instalações
 
-echo "${COLOR_BLUE}"
-echo "=> APT - Instalações"
-echo "${COLOR_RESET}"
+echo "${COLOR_BLUE} => APT - Instalações ${COLOR_RESET}"
 
 PROGRAMS_APT=(
-    audacity
     android-sdk-platform-tools-common # Dependência do Android Studio
-    blender
     breeze-cursor-theme # Tema para o cursor
     cpu-checker # Dependência do KVM
-    darktable
     dconf-cli # Dependência para a instalação do tema Dracula para Gnome Terminal
     fakeroot # Lib gráfica
     ffmpeg # Dependencia do OBS Studio e Free Download Manager
-    flatpak
-    font-manager
+    flatpak # Suporte ao flatpak
+    folder-color # Alterar cores de pastas na Nautilus
     gcc-multilib # Lib gráfica
-    com.github.tkashkin.gamehub
-    gimp
-    git
     git-man # Documentação do git
     gnome-boxes
     gnome-tweaks
     google-chrome-stable
-    inkscape
     insomnia
-    kdenlive
-    krita
-    krita-l10n # Dependência do Krita
     lib32z1 # Lib gráfica
     lib32stdc++6 # Lib gráfica
     libreoffice-style-papirus
     libreoffice-style-yaru  # Icones do Yaru para o LibreOffice
     libssl1.1 # Lib gráfica
-    lutris
     nodejs
     obs-studio
     ocl-icd-opencl-dev # Lib gráfica
-    opera-stable
     papirus-folders
     papirus-icon-theme
     postgresql
-    qemu-kvm
-    rawtherapee
-    ruby-full
+    qemu-kvm # Emulação e VMs
+    ruby-full # Dependência do ColorLS
     snapd
     sqlite
     sqlite-doc # Documentação
     sqlite3-doc # Documentação
     steam
-    timeshift
     typora
     unrar
     vim
     apt-transport-https # Dependencia do VSCode
-    code # ou code-insiders -y
-    vivaldi-stable
+    code # VSCode
     vlc
     xorriso # Lib gráfica
     zsh
@@ -177,26 +119,24 @@ PROGRAMS_APT=(
 sudo apt update
 
 for program in ${PROGRAMS_APT[@]}; do
-    echo "${COLOR_BLUE}"
-    echo "==> APT - Instalando ${program}"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} ==> APT - Instalando ${program} ${COLOR_RESET}"
+
     sudo apt install "$program" -y
 done
 
 # => SNAP - Instalações
 
 PROGRAMS_SNAP=(
-    akira,
     authpass,
     authy,
     gtk-common-themes,
+    nodemailerapp,
     sosumi
 )
 
 for program in ${PROGRAMS_SNAP[@]}; do
-    echo "${COLOR_BLUE}"
-    echo "==> SNAP - Instalando ${program}"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} ==> SNAP - Instalando ${program} ${COLOR_RESET}"
+    
     sudo snap install "$program"
 done
 
@@ -205,14 +145,15 @@ done
 PROGRAMS_FLATPAK=(
     flathub
     net.ankiweb.Anki
-    com.orama_interactive.Pixelorama
+    org.gimp.GIMP
+    org.inkscape.Inkscape
+    org.kde.kdenlive
     org.telegram.desktop
 )
 
 for program in ${PROGRAMS_FLATPAK[@]}; do
-    echo "${COLOR_BLUE}"
-    echo "==> FLATPAK - Instalando ${program}"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} ==> FLATPAK - Instalando ${program} ${COLOR_RESET}"
+    
     flatpak install "$program" -y
 done
 
@@ -225,9 +166,7 @@ update
 # ==> Android Studio
 
 android_studio () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando Android Studio"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando Android Studio ${COLOR_RESET}"
 
     url=$(curl -s https://developer.android.com/studio | grep -E "redirector.*linux.tar.gz" | grep -v "Linux" | sed "s/.*href=\"//g;s/\".*//g")
     wget -O android-studio.tar.gz $url
@@ -249,9 +188,7 @@ android_studio
 # ==> Expo
 
 expo () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando Expo CLI"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando Expo CLI ${COLOR_RESET}"
 
     sudo npm install --global expo-cli
 }
@@ -261,9 +198,7 @@ expo
 # ==> Free Download Manager
 
 free_download_manager () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando Free Download Manager"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando Free Download Manager ${COLOR_RESET}"
 
     wget -O freedownloadmanager.deb https://dn3.freedownloadmanager.org/6/latest/freedownloadmanager.deb
     sudo dpkg -i ./freedownloadmanager.deb
@@ -276,9 +211,7 @@ free_download_manager
 # ==> Itch
 
 itch () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando Itch"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando Itch ${COLOR_RESET}"
 
     wget -O itch-setup https://itch.io/app/download?platform=linux
     chmod +x itch-setup && ./itch-setup
@@ -289,9 +222,7 @@ itch
 # ==> JDK 8
 
 jdk8 () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando JDK 8"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando JDK 8 ${COLOR_RESET}"
 
     wget -O jdk-8u261-linux-x64.tar.gz http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u261-linux-x64.tar.gz
     sudo mkdir /usr/lib/jvm
@@ -315,9 +246,7 @@ jdk8 () {
     sudo rm -rf ./jdk-8u261-linux-x64.tar.gz
     java -version
 
-    echo "${COLOR_RED}"
-    echo "Caso haja erro nas variáveis de ambiente delete o arquivo /etc/environment e tire o .bkp do arquivo /etc/environment.bkp"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_YELLOW} Caso haja erro nas variáveis de ambiente delete o arquivo /etc/environment e tire o .bkp do arquivo /etc/environment.bkp ${COLOR_RESET}"
 }
 
 jdk8
@@ -325,9 +254,7 @@ jdk8
 # ==> Postbird
 
 postbird () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando Postbird"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando Postbird ${COLOR_RESET}"
 
     url=$(curl -s https://www.electronjs.org/apps/postbird | grep -E ".*postbird.*amd64.*deb" | sed "s/.*href=\"//g;s/\".*//g" | head -n 1)
     wget -O postbird.deb $url
@@ -341,9 +268,7 @@ postbird
 # ==> RClone
 
 rclone () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando RClone"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando RClone ${COLOR_RESET}"
 
     wget -O rclone-script.sh https://rclone.org/install.sh
     chmod a+x ./rclone-script.sh
@@ -355,9 +280,7 @@ rclone
 # ==> Yarn
 
 yarn () {
-    echo "${COLOR_BLUE}"
-    echo "=> Instalando Yarn"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Instalando Yarn ${COLOR_RESET}"
 
     sudo npm install -g yarn
 }
@@ -369,9 +292,7 @@ yarn
 # ==> Android Studio
 
 android_studio_settings () {
-    echo "${COLOR_GREEN}"
-    echo "=> Adicionando variáveis de Ambiente do Android Studio"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_GREEN} => Adicionando variáveis de Ambiente do Android Studio ${COLOR_RESET}"
 
     sudo cp /etc/environment /etc/environment.bkp
     PATH_VARIABLE=`grep "PATH=\"*\"" /etc/environment`
@@ -390,9 +311,7 @@ android_studio_settings
 # ==> Gdit
 
 gedit_settings () {
-    echo "${COLOR_GREEN}"
-    echo "=> Instalando tema Dracula no Gedit"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_GREEN} => Instalando tema Dracula no Gedit ${COLOR_RESET}"
 
     wget https://raw.githubusercontent.com/dracula/gedit/master/dracula.xml
     mkdir -p $HOME/.local/share/gedit/styles/
@@ -404,9 +323,7 @@ gedit_settings
 # ==> Git
 
 git_settings () {
-    echo "${COLOR_GREEN}"
-    echo "=> Configurando Git"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_GREEN} => Configurando Git ${COLOR_RESET}"
 
     git config --global user.name "Lucas Marçal Coutinho"
     git config --global user.email coutinho0604@gmail.com
@@ -419,9 +336,7 @@ git_settings
 # ==> KVM
 
 kvm_settings () {
-    echo "${COLOR_BLUE}"
-    echo "=> Configurando KVM"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Configurando KVM ${COLOR_RESET}"
 
     sudo adduser $USER kvm
 }
@@ -431,9 +346,7 @@ kvm_settings
 # ==> Papirus
 
 papirus_settings () {
-    echo "${COLOR_BLUE}"
-    echo "=> Configurando Papirus"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Configurando Papirus ${COLOR_RESET}"
 
     papirus-folders -C violet --theme Papirus-Dark
 }
@@ -443,10 +356,9 @@ papirus_settings
 # ==> Typora
 
 typora_settings () {
-    echo "${COLOR_GREEN}"
-    echo "=> Instalando tema Dracula no Typora"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_GREEN} => Instalando tema Dracula no Typora ${COLOR_RESET}"
 
+    typora # O Typora precisa iniciar pela primeira vez para criar as pastas de configurações no sistema. 
     wget -O typora-dracula-theme.zip https://github.com/dracula/typora/archive/master.zip
     unzip typora-dracula-theme.zip
     cd ./typora-master
@@ -454,10 +366,9 @@ typora_settings () {
     cd ../
     rm -rf typora-dracula-theme.zip
     rm -rf typora-master
+    killall -9 Typora # Fecha o Typora
 
-    echo "${COLOR_RED}"
-    echo "AVISO: Caso o haja erro tente abrir o Typora pela primeira vez para ele fazer suas configurações internas iniciais e tente novamente executar essa parte do script."
-    echo "${COLOR_RESET}"
+    echo "${COLOR_YELLOW} AVISO: Caso o haja erro, tente abrir o Typora pela primeira vez para ele fazer suas configurações internas iniciais e tente novamente executar essa parte do script. ${COLOR_RESET}"
 }
 
 typora_settings
@@ -465,9 +376,7 @@ typora_settings
 # ==> Vim
 
 vim_settings () {
-    echo "${COLOR_GREEN}"
-    echo "=> Instalando tema Dracula no Vim"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_GREEN} => Instalando tema Dracula no Vim ${COLOR_RESET}"
 
     git clone https://github.com/dracula/vim.git dracula
     mv dracula ~/.vim/pack/themes/opt # ou mv ~/.vim/pack/themes/opt para Vim 8.2 acima
@@ -478,9 +387,7 @@ vim_settings () {
 # ==> Yarn
 
 yarn_settings () {
-    echo "${COLOR_BLUE}"
-    echo "=> Habilitando emojis no Yarn"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} => Habilitando emojis no Yarn ${COLOR_RESET}"
 
     yarn config set -- --emoji true
 }
@@ -490,9 +397,7 @@ yarn_settings
 
 # => Baixando e instalando fontes
 
-echo "${COLOR_GREEN}"
-echo "=> Baixando e instalando fontes"
-echo "${COLOR_RESET}"
+echo "${COLOR_GREEN} => Baixando e instalando fontes ${COLOR_RESET}"
 
 FONTS=(
     Montserrat,
@@ -501,9 +406,7 @@ FONTS=(
 )
 
 for font in ${FONTS[@]}; do
-    echo "${COLOR_BLUE}"
-    echo "==> Baixando e instalando ${font}"
-    echo "${COLOR_RESET}"
+    echo "${COLOR_BLUE} ==> Baixando e instalando ${font} ${COLOR_RESET}"
     
     wget -O "$font".zip https://fonts.google.com/download?family="$font"
     unzip "$font".zip -d ./"$font"
@@ -513,6 +416,4 @@ done
 
 # => Finalizando instalações 
 
-echo "${COLOR_GREEN}"
-echo "=> Fim das instalações e configurações"
-echo "${COLOR_RESET}"
+echo "${COLOR_GREEN} => Fim das instalações e configurações ${COLOR_RESET}"
