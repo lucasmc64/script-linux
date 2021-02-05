@@ -87,9 +87,9 @@ PROGRAMS_APT=(
     gnome-tweaks
     google-chrome-stable
     insomnia
+    jq # Formatar o JSON no terminal
     lib32z1 # Lib gráfica
     lib32stdc++6 # Lib gráfica
-    libreoffice-style-papirus
     libreoffice-style-yaru  # Icones do Yaru para o LibreOffice
     libssl1.1 # Lib gráfica
     nodejs
@@ -100,9 +100,9 @@ PROGRAMS_APT=(
     postgresql
     qemu-kvm # Emulação e VMs
     ruby-full # Dependência do ColorLS
+    shellcheck # Checar erros em shellscripts
     snapd
     sqlite
-    sqlite-doc # Documentação
     sqlite3-doc # Documentação
     steam
     typora
@@ -127,12 +127,13 @@ done
 # => SNAP - Instalações
 
 PROGRAMS_SNAP=(
-    authpass,
-    authy,
-    gtk-common-themes,
-    nodemailerapp,
+    authpass
+    gtk-common-themes
+    nodemailerapp
     sosumi
 )
+
+sudo snap install authy --beta
 
 for program in ${PROGRAMS_SNAP[@]}; do
     echo "${COLOR_BLUE} ==> SNAP - Instalando ${program} ${COLOR_RESET}"
@@ -358,7 +359,6 @@ papirus_settings
 typora_settings () {
     echo "${COLOR_GREEN} => Instalando tema Dracula no Typora ${COLOR_RESET}"
 
-    typora # O Typora precisa iniciar pela primeira vez para criar as pastas de configurações no sistema. 
     wget -O typora-dracula-theme.zip https://github.com/dracula/typora/archive/master.zip
     unzip typora-dracula-theme.zip
     cd ./typora-master
@@ -384,6 +384,8 @@ vim_settings () {
     echo -e "packadd! dracula\nsyntax enable\ncolorscheme dracula" | tee -a ~/.vimrc
 }
 
+vim_settings
+
 # ==> Yarn
 
 yarn_settings () {
@@ -400,8 +402,8 @@ yarn_settings
 echo "${COLOR_GREEN} => Baixando e instalando fontes ${COLOR_RESET}"
 
 FONTS=(
-    Montserrat,
-    Poppins,
+    Montserrat
+    Poppins
     Roboto
 )
 
