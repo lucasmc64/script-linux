@@ -27,8 +27,7 @@ Be aware that this script has my personal settings and it may break if any packa
 It is interesting that you take a look at the script before running it. There are a few important points you need to be aware of:
 
 * It is vitally important that the Android Studio SDKs are downloaded from the `~/Android/Sdk` directory already created during installation. If you want to change this directory, change the script.
-* The script does not download the latest version of JDK8, but version 1.8.0-261. If you want the latest version, I recommend manually setting it up. I recommend this tutorial [here](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
-* Since the script does not download the latest version of JDK 8, it is necessary to change the versions in the script as the version on that unofficial server is updated. If the script fails to find JDK 8 on the server, open the file *./install.sh*, look for the version number and compare it with the one hosted on the [server](http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8). If they are not the same versions just replace the newer version number in the script, it will work normally.
+* The script does not download the latest version of JDK8. If you want the latest version, I recommend manually setting it up. I recommend this tutorial [here](https://www.javahelps.com/2015/03/install-oracle-jdk-in-ubuntu.html).
 * Change your Git account settings to your personal settings.
 
 ### It's time :robot:
