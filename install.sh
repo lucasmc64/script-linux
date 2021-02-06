@@ -417,6 +417,21 @@ for font in ${FONTS[@]}; do
     rm ./"$font".zip
 done
 
+# => Clonando meus repositórios
+
+REPOSITORIES=($(curl \
+    -u lucasmc64:$GITHUB_TOKEN_ACCESS \
+    -H "Accept: application/vnd.github.v3+json" \
+    "https://api.github.com/user/repos?type=owner" \
+    | sed "s/.*\"full_name\": \"//g;s/\".*//g" | sed "s/[\[\{\}\,]//g;s/\]//g;s/lucasmc64\///g"))
+
+for repository in ${REPOSITORIES[@]}; do
+    echo "${COLOR_BLUE} ==> Clonando repositório ${repository} ${COLOR_RESET}"
+
+    git clone https://lucasmc64:"$GITHUB_TOKEN_ACCESS"@github.com/lucasmc64/"$repository".git ~/Repositories/"$repository"
+    echo -e "\n"
+done
+
 # => Finalizando instalações 
 
 echo "${COLOR_GREEN} => Fim das instalações e configurações ${COLOR_RESET}"
