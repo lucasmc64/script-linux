@@ -2,7 +2,7 @@
 
 # Installation script :scroll:
 
-> This script was made and tested on * Pop! _OS 20.04 * and there is no guarantee that it will work on other distros or versions of this one.
+> This script was made and tested on *Pop! _OS 20.04* and there is no guarantee that it will work on other distros or versions of this one.
 
 ## What exactly does the script do? :thinking:
 

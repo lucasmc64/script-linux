@@ -59,7 +59,7 @@ update () {
     sudo dpkg --configure -a
     sudo apt install -f
     sudo apt update -m &&
-    sudo apt upgrade --fix-missing -y
+    sudo apt upgrade --fix-missing --allow-downgrades -y
     sudo apt autoclean
     sudo apt autoremove --purge -y
     sudo snap refresh
@@ -74,6 +74,7 @@ echo "${COLOR_BLUE} => APT - Instalações ${COLOR_RESET}"
 
 PROGRAMS_APT=(
     android-sdk-platform-tools-common # Dependência do Android Studio
+    apt-transport-https # Dependencia do VSCode
     breeze-cursor-theme # Tema para o cursor
     cpu-checker # Dependência do KVM
     dconf-cli # Dependência para a instalação do tema Dracula para Gnome Terminal
@@ -88,8 +89,8 @@ PROGRAMS_APT=(
     google-chrome-stable
     insomnia
     jq # Formatar o JSON no terminal
-    lib32z1 # Lib gráfica
     lib32stdc++6 # Lib gráfica
+    lib32z1 # Lib gráfica
     libreoffice-style-yaru  # Icones do Yaru para o LibreOffice
     libssl1.1 # Lib gráfica
     nodejs
@@ -102,13 +103,13 @@ PROGRAMS_APT=(
     ruby-full # Dependência do ColorLS
     shellcheck # Checar erros em shellscripts
     snapd
+    spice-client-gtk
     sqlite
     sqlite3-doc # Documentação
     steam
     typora
     unrar
     vim
-    apt-transport-https # Dependencia do VSCode
     code # VSCode
     vlc
     xorriso # Lib gráfica
@@ -134,6 +135,8 @@ PROGRAMS_SNAP=(
 )
 
 sudo snap install authy --beta
+
+snap connect authpass:password-manager-service
 
 for program in ${PROGRAMS_SNAP[@]}; do
     echo "${COLOR_BLUE} ==> SNAP - Instalando ${program} ${COLOR_RESET}"
