@@ -36,3 +36,5 @@ It is interesting that you take a look at the script before running it. There ar
 2. Open the terminal in the folder you extracted from the compressed file or the clone of that repository.
 3. Run the command `sudo chmod +x ./install.sh` to give the permissions to execute the script.
 4. Now run the `./install.sh` file.
+
+> Note: Near the end of the script execution, Typora will open. This is necessary to proceed with installing the theme on it.

@@ -103,7 +103,7 @@ PROGRAMS_APT=(
     ruby-full # Dependência do ColorLS
     shellcheck # Checar erros em shellscripts
     snapd
-    spice-client-gtk
+    spice-client-gtk # Dependência necessária para compartilhamento de pastas e recursos com VMs
     sqlite
     sqlite3-doc # Documentação
     steam
@@ -363,6 +363,7 @@ papirus_settings
 typora_settings () {
     echo "${COLOR_GREEN} => Instalando tema Dracula no Typora ${COLOR_RESET}"
 
+    typora
     wget -O typora-dracula-theme.zip https://github.com/dracula/typora/archive/master.zip
     unzip typora-dracula-theme.zip
     cd ./typora-master
@@ -370,7 +371,6 @@ typora_settings () {
     cd ../
     rm -rf typora-dracula-theme.zip
     rm -rf typora-master
-    killall -9 Typora # Fecha o Typora
 
     echo "${COLOR_YELLOW} AVISO: Caso o haja erro, tente abrir o Typora pela primeira vez para ele fazer suas configurações internas iniciais e tente novamente executar essa parte do script. ${COLOR_RESET}"
 }

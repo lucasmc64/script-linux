@@ -36,3 +36,5 @@ Esteja ciente que esse script está com minhas configurações pessoais e pode s
 2. Abra o terminal na pasta que você extraiu do arquivo compactado ou o clone desse repositório.
 3. Execute o comando `sudo chmod +x ./install.sh` para dar as permissões para a execução do script.
 4. Agora execute o arquivo `./install.sh`.
+
+> Obs.: Perto do fim da execução do script, o Typora será aberto. Isso é necessário para prosseguir com a instalação do tema nele.
