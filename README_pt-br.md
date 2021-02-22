@@ -2,7 +2,9 @@
 
 # Script de instalação :scroll:
 
-> Esse script foi feito e testado no *Pop!_OS 20.04* e não há garantias de que funcione em outras distros ou versões desta.
+> :us: If you prefer to read in another language, this README was also written in english. Click [HERE](/README.md) to access.
+
+Esse script foi feito e testado no *Pop!_OS 20.04* e não há garantias de que funcione em outras distros ou versões desta.
 
 ## O que o script faz exatamente? :thinking:
 

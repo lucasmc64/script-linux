@@ -93,6 +93,7 @@ PROGRAMS_APT=(
     lib32z1 # Lib gráfica
     libreoffice-style-yaru  # Icones do Yaru para o LibreOffice
     libssl1.1 # Lib gráfica
+    lutris
     nodejs
     obs-studio
     ocl-icd-opencl-dev # Lib gráfica
