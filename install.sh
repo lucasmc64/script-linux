@@ -21,6 +21,11 @@ echo "${COLOR_BLUE} ==> Instalando pacotes básicos necessários para prosseguir
 
 sudo apt install wget curl -y
 
+echo "${COLOR_BLUE} ==> Adicionando PPA do GitHub CLI ${COLOR_RESET}"
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+
 echo "${COLOR_BLUE} ==> Adicionando PPA do Google Chrome ${COLOR_RESET}"
 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list' &&
@@ -32,6 +37,10 @@ echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list &&
 wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
     | sudo apt-key add - 
+
+echo "${COLOR_BLUE} ==> Adicionando PPA do LibreOffice ${COLOR_RESET}"
+
+sudo add-apt-repository ppa:libreoffice/ppa
 
 echo "${COLOR_BLUE} ==> Adicionando PPA do Node.JS ${COLOR_RESET}"
 
@@ -83,6 +92,7 @@ PROGRAMS_APT=(
     flatpak # Suporte ao flatpak
     folder-color # Alterar cores de pastas na Nautilus
     gcc-multilib # Lib gráfica
+    gh # GitHub CLI
     git-man # Documentação do git
     gnome-boxes
     gnome-tweaks
@@ -283,6 +293,16 @@ rclone () {
 
 rclone
 
+# ==> Vercel CLI
+
+vercel_cli () {
+    echo "${COLOR_BLUE} => Instalando Vercel CLI ${COLOR_RESET}"
+
+    sudo npm install -g vercel
+}
+ 
+vercel_cli
+
 # ==> Yarn
 
 yarn () {
@@ -397,6 +417,14 @@ yarn_settings () {
     echo "${COLOR_BLUE} => Habilitando emojis no Yarn ${COLOR_RESET}"
 
     yarn config set -- --emoji true
+    sudo cp /etc/environment /etc/environment.bkp
+    PATH_VARIABLE=`grep "PATH=\"*\"" /etc/environment`
+    OLD_PATH_CONTENT=`echo ${PATH_VARIABLE:6:${#PATH_VARIABLE}-7}`
+    ADD_TO_PATH=`echo ":$(yarn global bin)"`
+    NEW_PATH_CONTENT=`echo ${OLD_PATH_CONTENT}${ADD_TO_PATH}`
+    OTHERS_VARIABLES=`grep -v "PATH=\"*\"" /etc/environment`
+    sudo rm -f /etc/environment
+    echo -e "PATH=\"${NEW_PATH_CONTENT}\"\n${OTHERS_VARIABLES}" | sudo tee -a /etc/environment
 }
 
 yarn_settings
