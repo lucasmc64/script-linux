@@ -107,6 +107,7 @@ PROGRAMS_APT=(
     nodejs
     obs-studio
     ocl-icd-opencl-dev # Lib gráfica
+    pandoc # Permite a importação de, por exemplo, .docx no Typora
     papirus-folders
     papirus-icon-theme
     postgresql
