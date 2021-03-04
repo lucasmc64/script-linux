@@ -142,6 +142,7 @@ done
 PROGRAMS_SNAP=(
     authpass
     gtk-common-themes
+    mailspring
     nodemailerapp
     sosumi
 )
