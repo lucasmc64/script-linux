@@ -97,6 +97,7 @@ PROGRAMS_APT=(
     gnome-boxes
     gnome-tweaks
     google-chrome-stable
+    hplip # Dependência pro scanner e impressora funcionarem
     insomnia
     jq # Formatar o JSON no terminal
     lib32stdc++6 # Lib gráfica
@@ -125,6 +126,7 @@ PROGRAMS_APT=(
     code # VSCode
     vlc
     xorriso # Lib gráfica
+    xsane # Dependência pro scanner e impressora funcionarem
     zsh
     zsh-doc
 )
