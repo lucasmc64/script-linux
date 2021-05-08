@@ -33,10 +33,8 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key ad
 
 echo "${COLOR_BLUE} ==> Adicionando PPA do Insomnia Core ${COLOR_RESET}"
 
-echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
-    | sudo tee -a /etc/apt/sources.list.d/insomnia.list &&
-wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
-    | sudo apt-key add - 
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
 
 echo "${COLOR_BLUE} ==> Adicionando PPA do LibreOffice ${COLOR_RESET}"
 
@@ -113,6 +111,7 @@ PROGRAMS_APT=(
     papirus-icon-theme
     postgresql
     qemu-kvm # Emulação e VMs
+    retroarch
     ruby-full # Dependência do ColorLS
     shellcheck # Checar erros em shellscripts
     snapd
@@ -270,6 +269,16 @@ jdk8 () {
 }
 
 jdk8
+
+# ==> Live Server
+
+live_server () {
+    echo "${COLOR_BLUE} => Instalando Live Server ${COLOR_RESET}"
+
+    sudo npm install -g live-server
+}
+ 
+live_server
 
 # ==> Postbird
 
